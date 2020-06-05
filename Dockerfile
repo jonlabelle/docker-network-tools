@@ -7,6 +7,7 @@ RUN apk -U upgrade && apk add --no-cache \
     fping \
     ngrep \
     nmap nmap-scripts \
-    netcat-openbsd
+    netcat-openbsd && \
+    rm -rf /var/cache/apk/*
 
 CMD ["/bin/sh"]
