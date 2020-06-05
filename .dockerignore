@@ -1,0 +1,11 @@
+## dirs
+.git
+.idea
+tmp
+
+## files
+*.md
+.gitignore
+Dockerfile
+Makefile
+docker-compose*
