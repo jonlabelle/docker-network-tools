@@ -1,6 +1,6 @@
 # Docker Network Tools
 
-Minimal (35 MB) Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
+Minimal (11 MB compressed) Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
 
 - [fping](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
 - [macchanger](https://github.com/alobbs/macchanger) - An utility for viewing/manipulating the MAC address of network interfaces.
