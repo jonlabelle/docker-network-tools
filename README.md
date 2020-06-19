@@ -39,4 +39,8 @@ To launch an interactive shell (`bin/sh`) terminal session, and start using the 
 docker run -it jonlabelle/network-tools
 ```
 
+## Also see
+
+- [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap) - Minimal Docker image with Nmap Network Security Scanner pre-installed.
+
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
