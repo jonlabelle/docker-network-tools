@@ -2,6 +2,7 @@ FROM alpine:latest
 MAINTAINER Jon LaBelle <contact@jonlabelle.com>
 
 RUN apk -U upgrade && apk add --no-cache \
+	ca-certificates \
     net-tools \
     macchanger \
     fping \
