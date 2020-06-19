@@ -4,6 +4,7 @@
 
 > Minimal Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
 
+- [curl](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
 - [fping](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
 - [macchanger](https://github.com/alobbs/macchanger) - An utility for viewing/manipulating the MAC address of network interfaces.
 - [netcat](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
