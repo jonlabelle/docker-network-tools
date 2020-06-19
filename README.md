@@ -1,5 +1,7 @@
 # Docker Network Tools
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg)][dockerhub]
+
 Minimal (11 MB compressed) Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
 
 - [fping](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
@@ -36,3 +38,5 @@ To launch an interactive shell (`bin/sh`) terminal session, and start using the 
 ```bash
 docker run -it jonlabelle/network-tools
 ```
+
+[dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
