@@ -11,22 +11,7 @@
 - [`ngrep`](https://github.com/jpr5/ngrep/) - A grep-like utility that allows you to search for network packets on an interface.
 - [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
-- [net-tools](https://sourceforge.net/projects/net-tools/) - Linux networking base tools.
-    - `netstat` - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
-    - `ypdomainname` - Show or set the system's NIS/YP domain name.
-    - `dnsdomainname` - Show the system's DNS domain name.
-    - `route` - Show / manipulate the IP routing table.
-    - `nisdomainname` - Show or set system's NIS/YP domain name.
-    - `domainname` - Show or set the system's NIS/YP domain name.
-    - `hostname` - Show or set the system's host name.
-    - `ifconfig` - Configure a network interface.
-    - `arp` - Manipulate the system ARP cache.
-    - `ipmaddr` - Adds, deletes, and displays multicast addresses.
-    - `rarp` - Manipulate the system RARP table.
-    - `slattach` - Attach a network interface to a serial line.
-    - `nameif` - Name network interfaces based on MAC addresses.
-    - `iptunnel` - Creates, deletes, and displays configured tunnels.
-    - `plipconfig` - Fine tune PLIP device parameters.
+- [`tcpdump`](https://www.tcpdump.org) - Dump and analyze traffic on a network.
 - [bind-tools](https://www.isc.org/dns-tools/) - The [ISC](https://www.isc.org/) DNS tools.
     - `arpaname` - Translate IP addresses to the corresponding ARPA names.
     - `delv` - DNS lookup and validation utility.
@@ -43,6 +28,22 @@
     - `named-journalprint` - Print zone journal in human-readable form.
     - `rndc-confgen` - RNDC key generation tool.
     - `tsig-keygen` - DDNS key generation tool.
+- [net-tools](https://sourceforge.net/projects/net-tools/) - Linux networking base tools.
+    - `netstat` - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+    - `ypdomainname` - Show or set the system's NIS/YP domain name.
+    - `dnsdomainname` - Show the system's DNS domain name.
+    - `route` - Show / manipulate the IP routing table.
+    - `nisdomainname` - Show or set system's NIS/YP domain name.
+    - `domainname` - Show or set the system's NIS/YP domain name.
+    - `hostname` - Show or set the system's host name.
+    - `ifconfig` - Configure a network interface.
+    - `arp` - Manipulate the system ARP cache.
+    - `ipmaddr` - Adds, deletes, and displays multicast addresses.
+    - `rarp` - Manipulate the system RARP table.
+    - `slattach` - Attach a network interface to a serial line.
+    - `nameif` - Name network interfaces based on MAC addresses.
+    - `iptunnel` - Creates, deletes, and displays configured tunnels.
+    - `plipconfig` - Fine tune PLIP device parameters.
 
 ## Resources
 

@@ -13,6 +13,7 @@ RUN apk -U upgrade && apk add --no-cache \
     netcat-openbsd && \
     bind-tools && \
     nload && \
+    tcpdump && \
     rm -rf /var/cache/apk/*
 
 CMD ["/bin/sh"]
