@@ -26,6 +26,22 @@
     - `nameif` - Name network interfaces based on MAC addresses.
     - `iptunnel` - Creates, deletes, and displays configured tunnels.
     - `plipconfig` - Fine tune PLIP device parameters.
+- [bind-tools](https://www.isc.org/dns-tools/) - The [ISC](https://www.isc.org/) DNS tools.
+    - `arpaname` - Translate IP addresses to the corresponding ARPA names.
+    - `delv` - DNS lookup and validation utility.
+    - `dig` - DNS lookup utility.
+    - `dnstap-read` - Print dnstap data in human-readable form.
+    - `host` - DNS lookup utility.
+    - `mdig` - DNS pipelined lookup utility.
+    - `named-rrchecker` - Syntax checker for individual DNS resource records.
+    - `nslookup` - Query Internet name servers interactively.
+    - `nsupdate` - Dynamic DNS update utility.
+    - `ddns-confgen` - DDNS key generation tool.
+    - `named-checkzone` - Zone file validity checking or converting tool.
+    - `named-compilezone` - Zone file validity checking or converting tool (similar to `named-checkzone`, but it always dumps the zone contents to a specified file in a specified format).
+    - `named-journalprint` - Print zone journal in human-readable form.
+    - `rndc-confgen` - RNDC key generation tool.
+    - `tsig-keygen` - DDNS key generation tool.
 
 ## Resources
 
