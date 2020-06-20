@@ -14,6 +14,7 @@ RUN apk -U upgrade && apk add --no-cache \
     bind-tools && \
     nload && \
     tcpdump && \
+    wget && \
     rm -rf /var/cache/apk/*
 
 CMD ["/bin/sh"]

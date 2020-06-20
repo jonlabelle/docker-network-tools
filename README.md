@@ -4,6 +4,8 @@
 
 > Minimal Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
 
+## Installed Network Tools
+
 - [`curl`](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
 - [`fping`](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
 - [`macchanger`](https://github.com/alobbs/macchanger) - An utility for viewing/manipulating the MAC address of network interfaces.
@@ -12,6 +14,7 @@
 - [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
 - [`tcpdump`](https://www.tcpdump.org) - Dump and analyze traffic on a network.
+- [`wget`](https://www.gnu.org/software/wget/wget.html) - A network utility to retrieve files from the web.
 - [bind-tools](https://www.isc.org/dns-tools/) - The [ISC](https://www.isc.org/) DNS tools.
     - `arpaname` - Translate IP addresses to the corresponding ARPA names.
     - `delv` - DNS lookup and validation utility.
