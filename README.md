@@ -8,7 +8,8 @@
 
 - [`curl`](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
 - [`fping`](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
-- [`macchanger`](https://github.com/alobbs/macchanger) - An utility for viewing/manipulating the MAC address of network interfaces.
+- [`jq`](https://stedolan.github.io/jq/) - A lightweight and flexible command line JSON processor.
+- [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
 - [`ngrep`](https://github.com/jpr5/ngrep/) - A grep-like utility that allows you to search for network packets on an interface.
 - [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
@@ -32,7 +33,7 @@
     - `rndc-confgen` - RNDC key generation tool.
     - `tsig-keygen` - DDNS key generation tool.
 - [net-tools](https://sourceforge.net/projects/net-tools/) - Linux networking base tools.
-    - `netstat` - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+    - `netstat` - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
     - `ypdomainname` - Show or set the system's NIS/YP domain name.
     - `dnsdomainname` - Show the system's DNS domain name.
     - `route` - Show / manipulate the IP routing table.
