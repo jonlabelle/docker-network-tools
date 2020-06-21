@@ -2,13 +2,15 @@ NAME=network-tools
 TAG=dev
 IMAGE_NAME=$(NAME):$(TAG)
 
+default: build
+
 .PHONY: build
 build:
 	docker build --tag "$(IMAGE_NAME)" .
 
 .PHONY: run
 run:
-	docker run --name "$(NAME)" --interactive --tty "$(IMAGE_NAME)"
+	docker run --name "$(NAME)" --rm --interactive --tty "$(IMAGE_NAME)"
 
 .PHONY: test
 test:

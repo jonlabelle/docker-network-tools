@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-LABEL maintainer="contact@jonlabelle.com"
-LABEL description="Minimal Docker image with various network tools pre-installed."
+LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
+      description="Minimal Docker image with various network tools pre-installed."
 
 RUN apk -U upgrade && apk add --no-cache \
     ca-certificates \
