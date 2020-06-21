@@ -1,20 +1,19 @@
 NAME=network-tools
-VERSION=dev
-
-IMAGE_NAME=$(NAME):$(VERSION)
+TAG=dev
+IMAGE_NAME=$(NAME):$(TAG)
 
 .PHONY: build
 build:
-	docker build --rm -t $(IMAGE_NAME) .
+	docker build --tag "$(IMAGE_NAME)" .
 
 .PHONY: run
 run:
-	docker run --name network-tools -it network-tools:dev
+	docker run --name "$(NAME)" --interactive --tty "$(IMAGE_NAME)"
 
 .PHONY: test
 test:
-	docker-compose -f docker-compose.test.yml up --build
+	docker-compose --file docker-compose.test.yml up --build
 
 .PHONY: clean
 clean:
-	docker rmi $(IMAGE_NAME)
+	docker rmi "$(IMAGE_NAME)"
