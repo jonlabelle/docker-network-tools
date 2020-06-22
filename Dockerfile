@@ -21,6 +21,7 @@ RUN apk -U upgrade && apk add --no-cache \
     tcpdump \
     wget \
     jq \
+    ipcalc \
     && rm -rf /var/cache/apk/*
 
 CMD ["/bin/sh"]
