@@ -18,6 +18,7 @@
 - [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
 - [`tcpdump`](https://www.tcpdump.org) - Dump and analyze traffic on a network.
+- [`tshark`](https://www.wireshark.org/) - Network protocol analyzer (Console version).
 - [`wget`](https://www.gnu.org/software/wget/wget.html) - A network utility to retrieve files from the web.
 - [bind-tools](https://www.isc.org/dns-tools/) - The ISC DNS tools.
     - `arpaname` - Translate IP addresses to the corresponding ARPA names.
@@ -71,7 +72,7 @@
 
 ## Usage
 
-To launch an interactive shell (`bin/sh`) terminal session, and start using the network tools:
+To launch an interactive (Bash) session in your terminal and start using the tools:
 
 ```bash
 docker run -it jonlabelle/network-tools

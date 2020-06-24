@@ -7,6 +7,8 @@ LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
       org.label-schema.vcs-type="Git"
 
 RUN apk -U upgrade && apk add --no-cache \
+    bash \
+    bash-completion \
     ca-certificates \
     libressl \
     curl \
@@ -24,6 +26,7 @@ RUN apk -U upgrade && apk add --no-cache \
     jq \
     ipcalc \
     iperf \
+    tshark \
     && rm -rf /var/cache/apk/*
 
-CMD ["/bin/sh"]
+CMD ["/bin/bash", "--login", "-i"]
