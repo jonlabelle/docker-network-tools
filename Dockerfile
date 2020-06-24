@@ -23,6 +23,7 @@ RUN apk -U upgrade && apk add --no-cache \
     wget \
     jq \
     ipcalc \
+    iperf \
     && rm -rf /var/cache/apk/*
 
 CMD ["/bin/sh"]

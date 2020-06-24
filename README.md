@@ -9,6 +9,7 @@
 - [`curl`](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
 - [`fping`](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
 - [`ipcalc`](http://jodies.de/ipcalc) - Network IP calculator.
+- [`iperf`](https://sourceforge.net/projects/iperf2/) - A tool to measure IP bandwidth using UDP or TCP.
 - [`jq`](https://stedolan.github.io/jq/) - A lightweight and flexible command line JSON processor.
 - [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
