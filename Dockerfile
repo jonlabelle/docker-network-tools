@@ -8,7 +8,7 @@ LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
 
 RUN apk -U upgrade && apk add --no-cache \
     ca-certificates \
-    openssl \
+    libressl \
     curl \
     net-tools \
     iputils \
