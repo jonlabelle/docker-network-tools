@@ -17,7 +17,7 @@
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
 - [`tcpdump`](https://www.tcpdump.org) - Dump and analyze traffic on a network.
 - [`wget`](https://www.gnu.org/software/wget/wget.html) - A network utility to retrieve files from the web.
-- [bind-tools](https://www.isc.org/dns-tools/) - The [ISC](https://www.isc.org/) DNS tools.
+- [bind-tools](https://www.isc.org/dns-tools/) - The ISC DNS tools.
     - `arpaname` - Translate IP addresses to the corresponding ARPA names.
     - `delv` - DNS lookup and validation utility.
     - `dig` - DNS lookup utility.
@@ -33,6 +33,18 @@
     - `named-journalprint` - Print zone journal in human-readable form.
     - `rndc-confgen` - RNDC key generation tool.
     - `tsig-keygen` - DDNS key generation tool.
+- [iputils](https://github.com/iputils/iputils/) - IP Configuration Utilities (and Ping).
+    - `arping` - Send ARP REQUEST to a neighbor host.
+    - `clockdiff` - Measure clock difference between hosts.
+    - `ninfod` - Respond to IPv6 Node Information Queries.
+    - `ping` - Send IP4 ICMP ECHO_REQUEST to network hosts.
+    - `ping6` - Send IP6 ICMP ECHO_REQUEST to network hosts.
+    - `rarpd` - Reverse Address Resolution Protocol(RARP) daemon.
+    - `rdisc` - Network router discovery daemon.
+    - `tftpd` - IPv4 Trivial File Transfer Protocol client.
+    - `tracepath` - Traces path to a IP4 network host discovering MTU along this path.
+    - `tracepath6` - Traces path to a IP6 network host discovering MTU along this path.
+    - `traceroute6` - Print the route packets trace to IP6 network host.
 - [net-tools](https://sourceforge.net/projects/net-tools/) - Linux networking base tools.
     - `netstat` - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
     - `ypdomainname` - Show or set the system's NIS/YP domain name.

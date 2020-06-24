@@ -11,6 +11,7 @@ RUN apk -U upgrade && apk add --no-cache \
     openssl \
     curl \
     net-tools \
+    iputils \
     macchanger \
     fping \
     ngrep \
