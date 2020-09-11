@@ -33,6 +33,6 @@ RUN apk -U upgrade && apk add --no-cache \
     tshark \
     oath-toolkit-oathtool \
     && rm -rf /var/cache/apk/* \
-    && echo 'export PS1="[\u@docker]\$ "' >> /root/.bash_profile
+    && echo 'export PS1="[docker-network-tools]\$ "' >> /root/.bash_profile
 
 CMD ["/bin/bash", "--login", "-i"]
