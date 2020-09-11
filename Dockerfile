@@ -12,6 +12,7 @@ RUN apk -U upgrade && apk add --no-cache \
     ca-certificates \
     libressl \
     curl \
+    socat \
     net-tools \
     openssh-client \
     coreutils \
