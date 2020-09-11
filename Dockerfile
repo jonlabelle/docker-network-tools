@@ -13,6 +13,8 @@ RUN apk -U upgrade && apk add --no-cache \
     libressl \
     curl \
     net-tools \
+    openssh-client \
+    coreutils \
     iputils \
     macchanger \
     fping \
@@ -27,6 +29,7 @@ RUN apk -U upgrade && apk add --no-cache \
     ipcalc \
     iperf \
     tshark \
+    oath-toolkit-oathtool \
     && rm -rf /var/cache/apk/*
 
 CMD ["/bin/bash", "--login", "-i"]

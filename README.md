@@ -17,6 +17,9 @@
 - [`ngrep`](https://github.com/jpr5/ngrep/) - A grep-like utility that allows you to search for network packets on an interface.
 - [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
+- [`oath-toolkit-oathtool`](https://www.nongnu.org/oath-toolkit/index.html) - A command line tool for generating and validating OTPs (One-Time Passwords).
+- [`socat`](http://www.dest-unreach.org/socat/) - Multipurpose relay for binary protocols.
+- [`ssh`](https://www.openssh.com/portable.html) - OpenBSD's SSH client.
 - [`tcpdump`](https://www.tcpdump.org) - Dump and analyze traffic on a network.
 - [`tshark`](https://www.wireshark.org/) - Network protocol analyzer (Console version).
 - [`wget`](https://www.gnu.org/software/wget/wget.html) - A network utility to retrieve files from the web.
