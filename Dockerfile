@@ -32,6 +32,7 @@ RUN apk -U upgrade && apk add --no-cache \
     iperf \
     tshark \
     oath-toolkit-oathtool \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    && echo 'export PS1="[\u@docker]\$ "' >> /root/.bash_profile
 
 CMD ["/bin/bash", "--login", "-i"]
