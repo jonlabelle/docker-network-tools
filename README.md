@@ -18,6 +18,7 @@
 - [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
 - [`oath-toolkit-oathtool`](https://www.nongnu.org/oath-toolkit/index.html) - A command line tool for generating and validating OTPs (One-Time Passwords).
+- [`openssl`](https://www.openssl.org/) - Toolkit for Transport Layer Security (TLS).
 - [`socat`](http://www.dest-unreach.org/socat/) - Multipurpose relay for binary protocols.
 - [`ssh`](https://www.openssh.com/portable.html) - OpenBSD's SSH client.
 - [`tcpdump`](https://www.tcpdump.org) - Dump and analyze traffic on a network.

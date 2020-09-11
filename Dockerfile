@@ -10,6 +10,7 @@ RUN apk -U upgrade && apk add --no-cache \
     bash \
     bash-completion \
     ca-certificates \
+    openssl \
     libressl \
     curl \
     socat \
