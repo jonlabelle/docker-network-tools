@@ -1,8 +1,10 @@
-NAME=network-tools
-TAG=dev
-IMAGE_NAME=$(NAME):$(TAG)
+NAME := network-tools
+TAG := dev
+
+IMAGE_NAME = $(NAME):$(TAG)
 
 default: build
+all: build run
 
 .PHONY: build
 build:
