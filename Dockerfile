@@ -17,6 +17,7 @@ RUN apk -U upgrade && apk add --no-cache \
     net-tools \
     openssh-client \
     coreutils \
+    findutils \
     iputils \
     macchanger \
     fping \

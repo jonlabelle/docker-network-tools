@@ -5,4 +5,4 @@ services:
   # see https://docs.docker.com/docker-hub/builds/automated-testing/
   sut:
     build: .
-    command: ["/bin/sh", "-c", "which bash && which fping && which macchanger && which nc && which ngrep && which nmap && which netstat && which libressl && which drill && which curl && which git"]
+    command: ["/bin/sh", "-c", "which bash && which fping && which macchanger && which nc && which ngrep && which nmap && which netstat && which libressl && which drill && which curl && which git && which find"]

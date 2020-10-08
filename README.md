@@ -43,6 +43,11 @@
     - `named-journalprint` - Print zone journal in human-readable form.
     - `rndc-confgen` - RNDC key generation tool.
     - `tsig-keygen` - DDNS key generation tool.
+- [findutils](https://www.gnu.org/software/findutils/) - GNU utilities for finding files.
+    - `find` - Search for files in a directory hierarchy.
+    - `locate` - List files in databases that match a pattern.
+    - `updatedb` - Update a file name database.
+    - `xargs` - Build and execute command lines from standard input.
 - [iputils](https://github.com/iputils/iputils/) - IP Configuration Utilities (and Ping).
     - `arping` - Send ARP REQUEST to a neighbor host.
     - `clockdiff` - Measure clock difference between hosts.
