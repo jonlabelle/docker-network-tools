@@ -4,13 +4,15 @@
 
 > Minimal Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
 
-## Installed Network Tools
+## Installed Tools
 
 - [`curl`](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
+- [`drill`](http://nlnetlabs.nl/projects/ldns/) - DNS(SEC) query tool ala dig.
 - [`fping`](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
 - [`ipcalc`](http://jodies.de/ipcalc) - Network IP calculator.
 - [`iperf`](https://sourceforge.net/projects/iperf2/) - A tool to measure IP bandwidth using UDP or TCP.
 - [`jq`](https://stedolan.github.io/jq/) - A lightweight and flexible command line JSON processor.
+- [`libidn`](https://www.gnu.org/software/libidn) - Encode/Decode library for internationalized domain names.
 - [`libressl`](https://www.libressl.org) - Version of the TLS/crypto stack forked from OpenSSL.
 - [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
@@ -68,6 +70,24 @@
     - `nameif` - Name network interfaces based on MAC addresses.
     - `iptunnel` - Creates, deletes, and displays configured tunnels.
     - `plipconfig` - Fine tune PLIP device parameters.
+- [procps](https://gitlab.com/procps-ng/procps) - Utilities for monitoring your system and processes on your system.
+    - `free` - Report the amount of free and used memory in the system.
+    - `kill` - Send a signal to a process based on PID.
+    - `pgrep` - List processes based on name or other attributes.
+    - `pkill` - Send a signal to a process based on name or other attributes.
+    - `pmap` - Report memory map of a process.
+    - `ps` - Report information of processes.
+    - `pwdx` - Report current directory of a process.
+    - `skill` - Obsolete version of pgrep/pkill.
+    - `slabtop` - Display kernel slab cache information in real time.
+    - `snice` - Renice a process.
+    - `sysctl` - Read or Write kernel parameters at run-time.
+    - `tload` - Graphical representation of system load average.
+    - `top` - Dynamic real-time view of running processes.
+    - `uptime` - Display how long the system has been running.
+    - `vmstat` - Report virtual memory statistics.
+    - `w` - Report logged in users and what they are doing.
+    - `watch` - Execute a program periodically, showing output full-screen.
 
 ## Resources
 

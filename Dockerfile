@@ -8,11 +8,11 @@ LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
 
 RUN apk -U upgrade && apk add --no-cache \
     bash \
+    procps \
     bash-completion \
     ca-certificates \
     openssl \
     libressl \
-    curl \
     socat \
     net-tools \
     openssh-client \
@@ -31,7 +31,10 @@ RUN apk -U upgrade && apk add --no-cache \
     ipcalc \
     iperf \
     tshark \
+    drill \
+    libidn \
     oath-toolkit-oathtool \
+    curl \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
 
