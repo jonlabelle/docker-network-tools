@@ -35,6 +35,7 @@ RUN apk -U upgrade && apk add --no-cache \
     libidn \
     oath-toolkit-oathtool \
     curl \
+    git \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
 
