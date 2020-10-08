@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
-      description="Minimal Docker image with various network tools pre-installed." \
+      description="A Docker image with various network tools pre-installed." \
       org.label-schema.url="https://hub.docker.com/r/jonlabelle/network-tools" \
       org.label-schema.vcs-url="https://github.com/jonlabelle/docker-network-tools" \
       org.label-schema.vcs-type="Git"

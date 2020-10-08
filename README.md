@@ -2,7 +2,7 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg)][dockerhub]
 
-> Minimal Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
+> A Docker image ([alpine:latest](https://hub.docker.com/_/alpine)) with various network tools pre-installed.
 
 ## Installed Tools
 
