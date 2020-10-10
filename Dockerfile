@@ -28,7 +28,8 @@ RUN apk -U upgrade && apk add --no-cache \
     netcat-openbsd \
     ngrep \
     nload \
-    nmap nmap-scripts \
+    nmap \
+    nmap-scripts \
     oath-toolkit-oathtool \
     openssh-client \
     openssl \
