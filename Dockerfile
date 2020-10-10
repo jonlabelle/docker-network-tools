@@ -8,35 +8,35 @@ LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
 
 RUN apk -U upgrade && apk add --no-cache \
     bash \
-    procps \
     bash-completion \
-    ca-certificates \
-    openssl \
-    libressl \
-    socat \
-    net-tools \
-    openssh-client \
-    coreutils \
-    findutils \
-    iputils \
-    macchanger \
-    fping \
-    ngrep \
-    nmap nmap-scripts \
-    netcat-openbsd \
     bind-tools \
-    nload \
-    tcpdump \
-    wget \
-    jq \
+    ca-certificates \
+    coreutils \
+    curl \
+    drill \
+    findutils \
+    fping \
+    git \
     ipcalc \
     iperf \
-    tshark \
-    drill \
+    iputils \
+    jq \
     libidn \
+    libressl \
+    macchanger \
+    net-tools \
+    netcat-openbsd \
+    ngrep \
+    nload \
+    nmap nmap-scripts \
     oath-toolkit-oathtool \
-    curl \
-    git \
+    openssh-client \
+    openssl \
+    procps \
+    socat \
+    tcpdump \
+    tshark \
+    wget \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
 
