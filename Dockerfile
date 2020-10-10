@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 
 LABEL maintainer="Jon LaBelle <contact@jonlabelle.com>" \
       description="A Docker image with various network tools pre-installed." \
