@@ -94,6 +94,8 @@
     - `vmstat` - Report virtual memory statistics.
     - `w` - Report logged in users and what they are doing.
     - `watch` - Execute a program periodically, showing output full-screen.
+- [python3](https://www.python.org) - Python 3 language interpreter.
+    - [requests](https://pypi.org/project/requests/) - Requests is an elegant and simple HTTP library for Python, built for human beings.
 
 ## Resources
 
