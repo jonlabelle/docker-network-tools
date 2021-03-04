@@ -105,8 +105,6 @@ To run the tools in a new container with an interactive Bash session:
 docker run --rm -it jonlabelle/network-tools
 ```
 
-> **NOTE** `-rm` automatically removes the container upon exiting. See [Docker run reference] for more options.
-
 ## Also see
 
 - [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
