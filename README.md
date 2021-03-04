@@ -97,11 +97,6 @@
 - [python3](https://www.python.org) - Python 3 language interpreter.
     - [requests](https://pypi.org/project/requests/) - Requests is an elegant and simple HTTP library for Python, built for human beings.
 
-## Resources
-
-- [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
-- [Dockerfile](https://github.com/jonlabelle/docker-network-tools/blob/master/Dockerfile) on GitHub
-
 ## Usage
 
 To run the tools in a new container with an interactive Bash session:
@@ -111,6 +106,11 @@ docker run --rm -it jonlabelle/network-tools
 ```
 
 > **NOTE** `-rm` automatically removes the container upon exiting. See [Docker run reference] for more options.
+
+## Also see
+
+- [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
+- [Dockerfile](https://github.com/jonlabelle/docker-network-tools/blob/master/Dockerfile) on GitHub
 
 ## Related
 
