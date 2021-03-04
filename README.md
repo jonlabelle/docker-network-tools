@@ -105,6 +105,8 @@ To run the tools in a new container with an interactive Bash session:
 docker run --rm -it jonlabelle/network-tools
 ```
 
+> See [Docker run](https://docs.docker.com/engine/reference/commandline/run/#options) docs for additional options.
+
 ## Also see
 
 - [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
