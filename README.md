@@ -104,7 +104,7 @@
 
 ## Usage
 
-To run an interactive Bash session in the container from your terminal and start using the tools:
+To run the tools in a new container with an interactive Bash session:
 
 ```bash
 docker run --rm -it jonlabelle/network-tools
@@ -112,9 +112,9 @@ docker run --rm -it jonlabelle/network-tools
 
 > **NOTE** `-rm` automatically removes the container upon exiting. See [Docker run reference] for more options.
 
-## Also see
+## Related
 
-- [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap) - Minimal Docker image with Nmap Network Security Scanner pre-installed.
+- [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
 
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
 [Docker run reference]: https://docs.docker.com/engine/reference/run/
