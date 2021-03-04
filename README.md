@@ -4,7 +4,7 @@
 
 > A Docker image with various network tools pre-installed.
 
-## Installed Tools
+## Included tools
 
 - [`curl`](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
 - [`drill`](https://nlnetlabs.nl/projects/ldns/) - DNS(SEC) query tool ala dig.
