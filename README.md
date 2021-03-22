@@ -18,7 +18,7 @@
 - [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
 - [`ngrep`](https://github.com/jpr5/ngrep/) - A grep-like utility that allows you to search for network packets on an interface.
-- [`nload`](http://www.roland-riegel.de/nload/) - Console network traffic and bandwidth monitor.
+- [`nload`](https://github.com/rolandriegel/nload) - Console network traffic and bandwidth monitor.
 - [`nmap`](https://nmap.org/) - Network Security Scanner.
 - [`oath-toolkit-oathtool`](https://www.nongnu.org/oath-toolkit/index.html) - A command line tool for generating and validating OTPs (One-Time Passwords).
 - [`openssl`](https://www.openssl.org/) - Toolkit for Transport Layer Security (TLS).
