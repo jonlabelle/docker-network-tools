@@ -99,13 +99,21 @@
 
 ## Usage
 
-To run the tools in a new container with an interactive Bash session:
+To use the tools in a new container from a terminal session:
 
 ```bash
 docker run --rm -it jonlabelle/network-tools
 ```
 
-> See [Docker run](https://docs.docker.com/engine/reference/commandline/run/#options) docs for additional options.
+**Docker Run Options:**
+
+|         Option        |                    Description                    |
+|-----------------------|---------------------------------------------------|
+| `--rm`                | Automatically remove the container when it exits. |
+| `--interactive`, `-i` | Keep STDIN open even if not attached              |
+| `--tty`, `-t`         | Allocate a pseudo-TTY                             |
+
+See [Docker Run Options documentation] for more options.
 
 ## Also see
 
@@ -118,3 +126,4 @@ docker run --rm -it jonlabelle/network-tools
 
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
 [Docker run reference]: https://docs.docker.com/engine/reference/run/
+[Docker Run Options documentation]: https://docs.docker.com/engine/reference/commandline/run/#options
