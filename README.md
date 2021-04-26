@@ -130,11 +130,6 @@ Scanning 256 hosts [4 ports/host]
 ...
 ```
 
-## Also see
-
-- [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
-- [Dockerfile](https://github.com/jonlabelle/docker-network-tools/blob/master/Dockerfile) on GitHub
-
 ## Related
 
 - [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
