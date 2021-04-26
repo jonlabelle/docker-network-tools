@@ -115,6 +115,21 @@ docker run --rm -it jonlabelle/network-tools
 
 See [Docker Run Options documentation] for more options.
 
+## Examples
+
+Use [Nmap](https://nmap.org/) to scan for devices on a local network (10.0.10.0/24):
+
+```console
+$ docker run --rm -it jonlabelle/network-tools
+[docker@network-tools]$ nmap -v 10.0.10.0/24
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-26 15:32 UTC
+Initiating Ping Scan at 15:32
+Scanning 256 hosts [4 ports/host]
+...
+...
+...
+```
+
 ## Also see
 
 - [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
