@@ -6,8 +6,8 @@ jobs:
     name: ci
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      uses: docker/build-push-action@v1
-      with:
-        push: false
+      - uses: actions/checkout@v2
+      - name: Build
+        uses: docker/build-push-action@v1
+        with:
+          push: false
