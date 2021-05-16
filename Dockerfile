@@ -20,6 +20,7 @@ RUN apk -U upgrade && apk add --no-cache \
     git \
     ipcalc \
     iperf \
+    iproute2 \
     iputils \
     jq \
     libidn \

@@ -50,6 +50,21 @@
     - `locate` - List files in databases that match a pattern.
     - `updatedb` - Update a file name database.
     - `xargs` - Build and execute command lines from standard input.
+- [iproute2](https://wiki.linuxfoundation.org/networking/iproute2) - IP Routing Utilities.
+    - `bridge` - Show / manipulate bridge addresses and devices.
+    - `ctstat` Unified linux network statistics.
+    - `genl` - Generic netlink utility frontend.
+    - `ifcfg` - Simplistic script which replaces ifconfig IP management.
+    - `ifstat` - Handy utility to read network interface statistics.
+    - `lnstat` - Unified linux network statistics.
+    - `nstat` - Network statistics tools.
+    - `routef` - Flush network routes.
+    - `routel` - List routes with pretty output format.
+    - `rtacct` - Monitor kernel snmp counters and network interface statistics.
+    - `rtmon` - Listens to and monitors RTnetlink.
+    - `rtpr` - Replace backslashes with newlines.
+    - `rtstat` - Unified linux network statistics.
+Read more at: https://www.commandlinux.com/man-page/man8/ctstat.8.html
 - [iputils](https://github.com/iputils/iputils/) - IP Configuration Utilities (and Ping).
     - `arping` - Send ARP REQUEST to a neighbor host.
     - `clockdiff` - Measure clock difference between hosts.
