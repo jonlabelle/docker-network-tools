@@ -61,11 +61,10 @@
     - `nstat` - Network statistics tools.
     - `routef` - Flush network routes.
     - `routel` - List routes with pretty output format.
-    - `rtacct` - Monitor kernel snmp counters and network interface statistics.
+    - `rtacct` - Monitor kernel SNMP counters and network interface statistics.
     - `rtmon` - Listens to and monitors RTnetlink.
     - `rtpr` - Replace backslashes with newlines.
     - `rtstat` - Unified linux network statistics.
-Read more at: https://www.commandlinux.com/man-page/man8/ctstat.8.html
 - [iputils](https://github.com/iputils/iputils/) - IP Configuration Utilities (and Ping).
     - `arping` - Send ARP REQUEST to a neighbor host.
     - `clockdiff` - Measure clock difference between hosts.
