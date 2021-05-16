@@ -26,6 +26,7 @@ RUN apk -U upgrade && apk add --no-cache \
     libidn \
     libressl \
     macchanger \
+    mtr \
     net-tools \
     netcat-openbsd \
     ngrep \
