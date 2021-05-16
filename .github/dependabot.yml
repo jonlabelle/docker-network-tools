@@ -1,9 +1,20 @@
 version: 2
+
 updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "weekly"
-
+    labels:
+      - docker
+      - dependencies
     # Un-comment to disable all pull requests for Docker dependencies
     # open-pull-requests-limit: 0
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    labels:
+      - github-actions
+      - dependencies
