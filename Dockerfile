@@ -7,6 +7,7 @@ LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
       org.label-schema.vcs-type="Git"
 
 RUN apk -U upgrade && apk add --no-cache \
+    apache2-utils \
     bash \
     bash-completion \
     bind-tools \
