@@ -151,10 +151,10 @@ Scanning 256 hosts [4 ports/host]
 
 - [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
 
+## License
+
+[MIT License](https://github.com/jonlabelle/docker-network-tools/blob/master/LICENSE.txt)
+
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
 [Docker run reference]: https://docs.docker.com/engine/reference/run/
 [Docker Run Options documentation]: https://docs.docker.com/engine/reference/commandline/run/#options
-
-## License
-
-[MIT License](LICENSE.txt)
