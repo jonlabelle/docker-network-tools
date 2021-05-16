@@ -155,3 +155,7 @@ Scanning 256 hosts [4 ports/host]
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
 [Docker run reference]: https://docs.docker.com/engine/reference/run/
 [Docker Run Options documentation]: https://docs.docker.com/engine/reference/commandline/run/#options
+
+## License
+
+[MIT License](LICENSE.txt)
