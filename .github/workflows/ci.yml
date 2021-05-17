@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2.4.0
         with:
           push: false
