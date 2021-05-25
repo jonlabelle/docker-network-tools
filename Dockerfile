@@ -48,6 +48,6 @@ RUN apk -U upgrade && apk add --no-cache \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
 
-COPY run_tests.sh /
+COPY run_tests.sh .
 
 CMD ["/bin/bash", "--login", "-i"]
