@@ -9,19 +9,19 @@
 set -e
 set -o pipefail
 
-which ab \
-    && which bash \
-    && which fping \
-    && which macchanger \
-    && which mtr \
-    && which nc \
-    && which ngrep \
-    && which nmap \
-    && which netstat \
-    && which libressl \
-    && which drill \
-    && which curl \
-    && which git \
-    && which find \
-    && which python3 \
+command -v ab \
+    && command -v bash \
+    && command -v fping \
+    && command -v macchanger \
+    && command -v mtr \
+    && command -v nc \
+    && command -v ngrep \
+    && command -v nmap \
+    && command -v netstat \
+    && command -v libressl \
+    && command -v drill \
+    && command -v curl \
+    && command -v git \
+    && command -v find \
+    && command -v python3 \
     && python3 -c 'import requests'
