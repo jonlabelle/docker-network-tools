@@ -1,11 +1,32 @@
 name: ci
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - "*.md"
+      - ".editorconfig"
+
+  pull_request:
+    branches: [master]
+    paths-ignore:
+      - "*.md"
+      - ".editorconfig"
+
+  workflow_dispatch:
+
 jobs:
   build:
     name: build
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v2
+
+      - name: Run Shellcheck
+        uses: azohra/shell-linter@latest
+
       - name: Build Docker image
         uses: docker/build-push-action@v2.4.0
         with:
