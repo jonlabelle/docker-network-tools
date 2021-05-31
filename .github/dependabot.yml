@@ -1,18 +1,18 @@
 version: 2
 
 updates:
-  - package-ecosystem: docker
+  - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
     labels:
-      - docker
-      - dependencies
+      - "docker"
+      - "dependencies"
 
-  - package-ecosystem: github-actions
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
     labels:
-      - github-actions
-      - dependencies
+      - "github-actions"
+      - "dependencies"
