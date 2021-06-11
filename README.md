@@ -1,6 +1,6 @@
 # Docker Network Tools
 
-[![ci](https://github.com/jonlabelle/docker-network-tools/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/ci.yml)
+[![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg)][dockerhub]
 
 > A Docker image with various network tools pre-installed.
