@@ -1,10 +1,7 @@
 FROM alpine:edge
 
 LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
-      description="A Docker image with various network tools pre-installed." \
-      org.label-schema.url="https://hub.docker.com/r/jonlabelle/network-tools" \
-      org.label-schema.vcs-url="https://github.com/jonlabelle/docker-network-tools" \
-      org.label-schema.vcs-type="Git"
+      description="A Docker image with various network tools pre-installed."
 
 RUN apk -U upgrade && apk add --no-cache \
     apache2-utils \
