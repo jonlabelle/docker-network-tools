@@ -21,7 +21,6 @@ RUN apk -U upgrade && apk add --no-cache \
     iputils \
     jq \
     libidn \
-    libressl \
     macchanger \
     mtr \
     net-tools \

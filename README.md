@@ -16,7 +16,6 @@
 - [`iperf`](https://sourceforge.net/projects/iperf2/) - A tool to measure IP bandwidth using UDP or TCP.
 - [`jq`](https://stedolan.github.io/jq/) - A lightweight and flexible command line JSON processor.
 - [`libidn`](https://www.gnu.org/software/libidn) - Encode/Decode library for internationalized domain names.
-- [`libressl`](https://www.libressl.org) - Version of the TLS/crypto stack forked from OpenSSL.
 - [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
 - [`mtr`](https://www.bitwizard.nl/mtr/) - Full screen ncurses traceroute tool.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
