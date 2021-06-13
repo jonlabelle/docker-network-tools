@@ -1,7 +1,8 @@
 # Docker Network Tools
 
 [![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg)][dockerhub]
+[![cd-ghcr](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd-ghcr.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd-ghcr.yml)
+[![Docker Hub pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg?label=docker%20hub%20pulls)][dockerhub]
 
 > A Docker image with various network tools pre-installed.
 
@@ -133,6 +134,10 @@ See [Docker Run Options documentation] for more options.
 
 ## Examples
 
+> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub],
+> replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
+> the examples below.
+
 Use [Nmap](https://nmap.org/) to scan for devices on a local network (10.0.10.0/24):
 
 ```console
@@ -148,12 +153,14 @@ Scanning 256 hosts [4 ports/host]
 
 ## Related
 
-- [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
+- [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
 
 ## License
 
 [MIT License](https://github.com/jonlabelle/docker-network-tools/blob/master/LICENSE.txt)
 
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
+[Docker Hub]: https://hub.docker.com/r/jonlabelle/network-tools
+[GitHub Container Registry]: https://github.com/users/jonlabelle/packages/container/package/network-tools
 [Docker run reference]: https://docs.docker.com/engine/reference/run/
 [Docker Run Options documentation]: https://docs.docker.com/engine/reference/commandline/run/#options
