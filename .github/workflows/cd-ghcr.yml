@@ -3,6 +3,8 @@ name: cd-ghcr
 on:
   push:
     branches: [master]
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
     paths-ignore:
       - "*.md"
       - ".editorconfig"
@@ -10,33 +12,37 @@ on:
   workflow_dispatch:
 
 env:
+  REGISTRY: ghcr.io
   IMAGE_NAME: network-tools
 
 jobs:
   push:
-    name: Push to GitHub Container Registry
+    name: Push to GitHub container registry
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     permissions:
-      packages: write
       contents: read
+      packages: write
 
     steps:
       - name: Checkout Git repository
         uses: actions/checkout@v2
 
-      - name: Build Docker image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
+      - name: Run Shellcheck
+        uses: azohra/shell-linter@latest
 
-      - name: Log in to GitHub container registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      - name: Build Docker image
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+
+      - name: Log into GitHub container registry ${{ env.REGISTRY }}
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
 
       - name: Push Docker image
         run: |
-          IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+          REMOTE_IMAGE_NAME=${{ env.REGISTRY }}/${{ github.repository_owner }}/$IMAGE_NAME
 
           # Change all uppercase to lowercase
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          REMOTE_IMAGE_NAME=$(echo $REMOTE_IMAGE_NAME | tr '[A-Z]' '[a-z]')
 
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
@@ -44,15 +50,8 @@ jobs:
           # Use Docker `latest` tag convention
           [ "$VERSION" == "master" ] && VERSION=latest
 
-          echo IMAGE_ID=$IMAGE_ID
+          echo REMOTE_IMAGE_NAME=$REMOTE_IMAGE_NAME
           echo VERSION=$VERSION
 
-          # Only push if master/latest (for now)
-          if [ "$VERSION" == "latest" ]; then
-            docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-            docker push $IMAGE_ID:$VERSION
-          else
-            echo "Push skipped, not on master branch, using latest tag."
-            echo "IMAGE_NAME: $IMAGE_NAME"
-            echo "IMAGE_ID:VERSION: $IMAGE_ID:$VERSION"
-          fi
+          docker tag $IMAGE_NAME $REMOTE_IMAGE_NAME:$VERSION
+          docker push $REMOTE_IMAGE_NAME:$VERSION

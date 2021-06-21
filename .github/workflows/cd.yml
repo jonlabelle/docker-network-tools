@@ -3,6 +3,8 @@ name: cd
 on:
   push:
     branches: [master]
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
     paths-ignore:
       - "*.md"
       - ".editorconfig"
@@ -22,7 +24,7 @@ jobs:
       - name: Run Shellcheck
         uses: azohra/shell-linter@latest
 
-      - name: Log in to Docker Hub
+      - name: Log into Docker Hub
         uses: docker/login-action@v1.9.0
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
