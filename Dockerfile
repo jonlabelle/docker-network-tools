@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 FROM alpine:edge
 
 LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
