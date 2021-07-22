@@ -8,7 +8,8 @@ on:
     paths-ignore:
       - "*.md"
       - ".editorconfig"
-
+  schedule:
+    - cron: "33 1 * * SUN" # every Sunday at 1:33 AM UTC
   workflow_dispatch:
 
 jobs:
