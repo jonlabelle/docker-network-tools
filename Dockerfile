@@ -1,7 +1,8 @@
-FROM alpine:edge
+ARG ALPINE_TAG=edge
+FROM alpine:${ALPINE_TAG}
 
 LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
-      description="A Docker image with various network tools pre-installed."
+    description="A Docker image with various network tools pre-installed."
 
 RUN apk -U upgrade && apk add --no-cache \
     apache2-utils \
@@ -43,7 +44,5 @@ RUN apk -U upgrade && apk add --no-cache \
     && python3 -m pip install requests \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
-
-COPY run_tests.sh .
 
 CMD ["/bin/bash", "--login", "-i"]

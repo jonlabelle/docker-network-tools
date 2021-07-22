@@ -16,11 +16,6 @@ build:
 run:
 	@docker run --name "$(NAME)" --rm --interactive --tty "$(IMAGE_NAME)"
 
-.PHONY: test
-test:
-	@docker-compose --file docker-compose.test.yml up --build
-	@docker-compose --file docker-compose.test.yml down
-
 .PHONY: clean
 clean:
 	@docker rmi "$(IMAGE_NAME)"
