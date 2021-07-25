@@ -1,7 +1,6 @@
 # Docker Network Tools
 
 [![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
-[![cd-ghcr](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd-ghcr.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd-ghcr.yml)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg?label=docker%20hub%20pulls)][dockerhub]
 
 > A Docker image with various network tools pre-installed.
