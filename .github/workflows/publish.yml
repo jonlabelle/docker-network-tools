@@ -44,10 +44,10 @@ jobs:
             jonlabelle/${{ env.IMAGE_NAME }}
             ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
           # 'latest=false' disables automatic handling of the 'latest' tag
-          flavor: latest=false
+          flavor: |
+            latest=false
           tags: |
-            type=latest
-            type=latest,branch=master
+            type=raw,value=latest
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.6.1
