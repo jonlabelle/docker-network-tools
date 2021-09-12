@@ -1,4 +1,4 @@
-ARG ALPINE_TAG=edge
+ARG ALPINE_TAG=latest
 FROM alpine:${ALPINE_TAG}
 
 LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \

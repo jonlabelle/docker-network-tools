@@ -10,7 +10,7 @@ all: build run
 
 .PHONY: build
 build:
-	@docker build --tag "$(IMAGE_NAME)" .
+	@docker build --no-cache --tag "$(IMAGE_NAME)" .
 
 .PHONY: run
 run:
