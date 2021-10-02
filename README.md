@@ -8,6 +8,7 @@
 ## Included tools
 
 - [`ab`](https://httpd.apache.org/docs/current/programs/ab.html) - Apache HTTP server benchmarking tool.
+- [`arp-scan`](https://github.com/royhills/arp-scan) - Address Resolution Protocol (ARP) packet scanner.
 - [`curl`](https://curl.haxx.se) - Command line tool and library for transferring data with URLs.
 - [`drill`](https://nlnetlabs.nl/projects/ldns/) - DNS(SEC) query tool ala dig.
 - [`fping`](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
