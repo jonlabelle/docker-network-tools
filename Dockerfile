@@ -6,6 +6,7 @@ LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
 
 RUN apk -U upgrade && apk add --no-cache \
     apache2-utils \
+    arp-scan \
     bash \
     bash-completion \
     bind-tools \
