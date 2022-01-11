@@ -1,6 +1,6 @@
 # Docker Network Tools
 
-[![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg?branch=master)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
+[![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg?label=docker%20hub%20pulls)][dockerhub]
 
 > A Docker image with various network tools pre-installed.
@@ -157,7 +157,7 @@ Scanning 256 hosts [4 ports/host]
 
 ## License
 
-[MIT License](https://github.com/jonlabelle/docker-network-tools/blob/master/LICENSE.txt)
+[MIT License](https://github.com/jonlabelle/docker-network-tools/blob/main/LICENSE.txt)
 
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
 [Docker Hub]: https://hub.docker.com/r/jonlabelle/network-tools

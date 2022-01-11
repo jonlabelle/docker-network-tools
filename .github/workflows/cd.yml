@@ -2,7 +2,7 @@ name: cd
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     tags:
       - "[0-9]+.[0-9]+.[0-9]+"
     paths-ignore:
