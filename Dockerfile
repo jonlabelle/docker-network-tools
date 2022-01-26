@@ -23,6 +23,7 @@ RUN apk -U upgrade && apk add --no-cache \
     jq \
     libidn \
     macchanger \
+    masscan \
     mtr \
     net-tools \
     netcat-openbsd \
@@ -39,7 +40,7 @@ RUN apk -U upgrade && apk add --no-cache \
     tshark \
     wget \
     python3 \
-    && apk add arp-scan --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache \
+    && apk add arp-scan hping3 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache \
     && python3 -m ensurepip \
     && pip3 install --upgrade pip \
     && python3 -m pip install requests \

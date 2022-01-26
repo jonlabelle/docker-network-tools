@@ -13,11 +13,13 @@
 - [`drill`](https://nlnetlabs.nl/projects/ldns/) - DNS(SEC) query tool ala dig.
 - [`fping`](https://fping.org) - A grep-like utility that allows you to search for network packets on an interface.
 - [`git`](https://www.git-scm.com/) - Distributed version control system.
+- [`hping3`](https://github.com/antirez/hping) - A ping-like TCP/IP packet assembler/analyzer.
 - [`ipcalc`](http://jodies.de/ipcalc) - Network IP calculator.
 - [`iperf`](https://sourceforge.net/projects/iperf2/) - A tool to measure IP bandwidth using UDP or TCP.
 - [`jq`](https://stedolan.github.io/jq/) - A lightweight and flexible command line JSON processor.
 - [`libidn`](https://www.gnu.org/software/libidn) - Encode/Decode library for internationalized domain names.
 - [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
+- [`masscan`](https://github.com/robertdavidgraham/masscan) - TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes.
 - [`mtr`](https://www.bitwizard.nl/mtr/) - Full screen ncurses traceroute tool.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
 - [`ngrep`](https://github.com/jpr5/ngrep/) - A grep-like utility that allows you to search for network packets on an interface.
