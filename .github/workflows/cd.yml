@@ -26,8 +26,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Run Shellcheck
-        uses: azohra/shell-linter@latest
+      - name: Lint Dockerfile
+        run: make lint
 
       - name: Log in to Docker Hub
         if: ${{ github.event_name != 'pull_request' }}
