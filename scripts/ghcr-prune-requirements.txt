@@ -1,0 +1,3 @@
+# pip3 install -r ghcr-prune-requirements.txt
+python-dateutil
+requests
