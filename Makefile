@@ -23,3 +23,4 @@ run:
 .PHONY: clean
 clean:
 	@docker rmi "$(IMAGE_NAME)"
+	@docker rmi hadolint/hadolint
