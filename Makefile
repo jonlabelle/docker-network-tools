@@ -6,7 +6,11 @@ TAG := dev
 IMAGE_NAME = $(NAME):$(TAG)
 
 default: build
-all: build run
+all: lint build run
+
+.PHONY: lint
+lint:
+	@docker run --rm -i --env "HADOLINT_IGNORE=DL3013,DL3018" hadolint/hadolint < Dockerfile
 
 .PHONY: build
 build:

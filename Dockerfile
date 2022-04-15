@@ -42,8 +42,8 @@ RUN apk -U upgrade && apk add --no-cache \
     python3 \
     && apk add --no-cache arp-scan envsubst hping3 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ \
     && python3 -m ensurepip \
-    && pip3 install --upgrade pip \
-    && python3 -m pip install requests \
+    && pip3 install --no-cache-dir --upgrade pip \
+    && python3 -m pip install --no-cache-dir requests \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
 
