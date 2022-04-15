@@ -34,7 +34,7 @@ if __name__ == "__main__":
     parser.add_argument('--container', default='hello-ghcr-meow', help='name of the container image')
     parser.add_argument('--verbose', '-v', action='store_true', help='print extra debug info')
     parser.add_argument('--prune-age', type=float, metavar='DAYS', default=None, help='delete untagged images older than DAYS days')
-    parser.add_argument('--dry-run', '-n', action='store_true', help='do not actually prune images, just list which would be pruned')
+    parser.add_argument('--dry-run', '-n', action='store_true', help='do not actually prune images, just list which images would be pruned')
 
     args = parser.parse_args()
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     for version in versions:
         created = dateutil.parser.isoparse(version['created_at'])
         metadata = version["metadata"]["container"]
-        print(f'{version["id"]}\t{version["name"]}\t{created}\t{metadata["tags"]}')
+        # print(f'{version["id"]}\t{version["name"]}\t{created}\t{metadata["tags"]}')
 
         # prune old untagged images if requested
         if del_before is not None and created < del_before and len(metadata['tags']) == 0:
