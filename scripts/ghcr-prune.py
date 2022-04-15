@@ -45,32 +45,32 @@ if __name__ == "__main__":
     else:
         raise ValueError('missing authentication token')
 
-    s = requests.Session()
-    s.headers.update({'Authorization': f'token {token}', 'Accept': github_api_accept})
+    sess = requests.Session()
+    sess.headers.update({'Authorization': f'token {token}', 'Accept': github_api_accept})
 
-    r = s.get(f'https://api.github.com/user/packages/container/{args.container}/versions')
-    versions = r.json()
+    resp = sess.get(f'https://api.github.com/user/packages/container/{args.container}/versions')
+    versions = resp.json()
 
     if args.verbose:
-        reset = datetime.fromtimestamp(int(r.headers["x-ratelimit-reset"]))
-        print(f'{r.headers["x-ratelimit-remaining"]} requests remaining until {reset}')
+        reset = datetime.fromtimestamp(int(resp.headers["x-ratelimit-reset"]))
+        print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining until {reset}')
         print(versions)
 
     del_before = datetime.now().astimezone() - timedelta(days=args.prune_age) \
         if args.prune_age is not None else None
     if del_before:
-        print(f'Pruning images created before {del_before}')
+        print(f'Pruning images created before: {del_before}')
 
-    for v in versions:
-        created = dateutil.parser.isoparse(v['created_at'])
-        metadata = v["metadata"]["container"]
-        print(f'{v["id"]}\t{v["name"]}\t{created}\t{metadata["tags"]}')
+    for version in versions:
+        created = dateutil.parser.isoparse(version['created_at'])
+        metadata = version["metadata"]["container"]
+        print(f'{version["id"]}\t{version["name"]}\t{created}\t{metadata["tags"]}')
 
         # prune old untagged images if requested
         if del_before is not None and created < del_before and len(metadata['tags']) == 0:
             if args.dry_run:
-                print(f'would delete {v["id"]}')
+                print(f'Would delete: {version["id"]}')
             else:
-                r = s.delete(f'https://api.github.com/user/packages/container/{args.container}/versions/{v["id"]}')
-                r.raise_for_status()
-                print(f'deleted {v["id"]}')
+                resp = sess.delete(f'https://api.github.com/user/packages/container/{args.container}/versions/{version["id"]}')
+                resp.raise_for_status()
+                print(f'Deleted: {version["id"]}')
