@@ -30,5 +30,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install --requirement scripts/ghcr-prune-requirements.txt
 
-      - name: Prune untagged images older than 14 days
-        run: python scripts/ghcr-prune.py --container network-tools --prune-age 14
+      - name: Prune all untagged images
+        run: python scripts/ghcr-prune.py --container network-tools --prune-all-untagged --verbose
