@@ -113,6 +113,11 @@ if __name__ == "__main__":
         print('No images qualified for deletion')
     else:
         if args.dry_run:
-            print(f'{deleted_image_count} image(s) would have been deleted')
+            print("{0} image{1} would have been deleted"
+                  .format(deleted_image_count, '' if deleted_image_count == 1 else 's'))
         else:
-            print(f'{deleted_image_count} image(s) were deleted')
+            print("{0} image{1} {2} deleted".format(
+                deleted_image_count,
+                '' if deleted_image_count == 1 else 's',
+                'was' if deleted_image_count == 1 else 'were'
+            ))
