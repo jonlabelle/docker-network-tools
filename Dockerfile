@@ -47,7 +47,7 @@ RUN apk -U upgrade \
         hping3 \
     && python3 -m ensurepip \
     && pip3 install --no-cache-dir --disable-pip-version-check --upgrade pip \
-    && python3 -m pip install --no-cache-dir requests \
+    && python3 -m pip install --no-cache-dir --disable-pip-version-check requests \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[docker@network-tools]\$ "' >> /root/.bash_profile
 
