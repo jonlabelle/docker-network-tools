@@ -4,42 +4,43 @@ FROM alpine:${ALPINE_TAG}
 LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
     description="A Docker image with various network tools pre-installed."
 
-RUN apk -U upgrade && apk add --no-cache \
-    apache2-utils \
-    bash \
-    bash-completion \
-    bind-tools \
-    ca-certificates \
-    coreutils \
-    curl \
-    drill \
-    findutils \
-    fping \
-    git \
-    ipcalc \
-    iperf \
-    iproute2 \
-    iputils \
-    jq \
-    libidn \
-    macchanger \
-    masscan \
-    mtr \
-    net-tools \
-    netcat-openbsd \
-    ngrep \
-    nload \
-    nmap \
-    nmap-scripts \
-    oath-toolkit-oathtool \
-    openssh-client \
-    openssl \
-    procps \
-    socat \
-    tcpdump \
-    tshark \
-    wget \
-    python3 \
+RUN apk -U upgrade \
+    && apk add --no-cache \
+        apache2-utils \
+        bash \
+        bash-completion \
+        bind-tools \
+        ca-certificates \
+        coreutils \
+        curl \
+        drill \
+        findutils \
+        fping \
+        git \
+        ipcalc \
+        iperf \
+        iproute2 \
+        iputils \
+        jq \
+        libidn \
+        macchanger \
+        masscan \
+        mtr \
+        net-tools \
+        netcat-openbsd \
+        ngrep \
+        nload \
+        nmap \
+        nmap-scripts \
+        oath-toolkit-oathtool \
+        openssh-client \
+        openssl \
+        procps \
+        socat \
+        tcpdump \
+        tshark \
+        wget \
+        python3 \
     && apk add --no-cache arp-scan envsubst hping3 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ \
     && python3 -m ensurepip \
     && pip3 install --no-cache-dir --upgrade pip \
