@@ -2,6 +2,7 @@
 
 [![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg)][dockerhub]
+[![CodeQL Analysis](https://github.com/jonlabelle/docker-network-tools/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/code-analysis.yml "CodeQL Analysis")
 
 > A Docker image with various network tools pre-installed.
 
