@@ -3,7 +3,7 @@ name: ghcr prune
 on:
   push:
   schedule:
-    - cron: "13 8 * * *" # Every day at 8:13 AM UTC
+    - cron: "37 7 * * MON" # Every Monday at 7:37 AM UTC
 
 jobs:
   prune:
