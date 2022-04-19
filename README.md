@@ -2,6 +2,7 @@
 
 [![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
 ![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools?label=docker%20pulls)
+![image size](https://img.shields.io/docker/image-size/jonlabelle/network-tools/latest?label=image%20size)
 
 > A Docker image with various network tools pre-installed.
 
