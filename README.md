@@ -85,30 +85,30 @@
 
 ## Packet analysis
 
-| Tool                                         | Description                                                                        | Resources                                                               |
-| -------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [`fping`](https://fping.org)                 | A grep-like utility that allows you to search for network packets on an interface. | [command examples](https://tldr.ostera.io/fping)                        |
-| [`hping3`](https://github.com/antirez/hping) | A ping-like TCP/IP packet assembler/analyzer.                                      | [command examples](https://tldr.ostera.io/hping3)                       |
-| [`ngrep`](https://github.com/jpr5/ngrep/)    | A grep-like utility that allows you to search for network packets on an interface. | [command examples](https://tldr.ostera.io/ngrep)                        |
-| [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.                                             | [tcpdump examples](https://tldr.ostera.io/tcpdump)                      |
-| [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).                                       | [tshark man page](https://www.wireshark.org/docs/man-pages/tshark.html) |
+| Tool                                         | Description                                   | Resources                                                               |
+| -------------------------------------------- | --------------------------------------------- | ----------------------------------------------------------------------- |
+| [`fping`](https://fping.org)                 | Search for network packets on an interface.   | [command examples](https://tldr.ostera.io/fping)                        |
+| [`hping3`](https://github.com/antirez/hping) | A ping-like TCP/IP packet assembler/analyzer. | [command examples](https://tldr.ostera.io/hping3)                       |
+| [`ngrep`](https://github.com/jpr5/ngrep/)    | Search for network packets on an interface.   | [command examples](https://tldr.ostera.io/ngrep)                        |
+| [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.        | [tcpdump examples](https://tldr.ostera.io/tcpdump)                      |
+| [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [tshark man page](https://www.wireshark.org/docs/man-pages/tshark.html) |
 
 ## Scanning and discovery
 
-| Tool                                                      | Description                                                                                                         | Resources                                           |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| [`arp-scan`](https://github.com/royhills/arp-scan)        | Address Resolution Protocol (ARP) packet scanner.                                                                   | [command examples](https://tldr.ostera.io/arp-scan) |
-| `arp`                                                     | Manipulate the system ARP cache.                                                                                    | -                                                   |
-| `arping`                                                  | Send ARP REQUEST to a neighbor host.                                                                                | -                                                   |
-| `clockdiff`                                               | Measure clock difference between hosts.                                                                             | -                                                   |
-| [`masscan`](https://github.com/robertdavidgraham/masscan) | Internet-scale port scanner.                                                                                        | [command examples](https://tldr.ostera.io/masscan)  |
-| `netstat`                                                 | Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships. | -                                                   |
-| `ninfod`                                                  | Respond to IPv6 Node Information Queries.                                                                           | -                                                   |
-| [`nmap`](https://nmap.org/)                               | Network Security Scanner.                                                                                           | [command examples](https://tldr.ostera.io/nmap)     |
-| `ping6`                                                   | Send IP6 ICMP ECHO_REQUEST to network hosts.                                                                        | -                                                   |
-| `ping`                                                    | Send IP4 ICMP ECHO_REQUEST to network hosts.                                                                        | -                                                   |
-| `rarpd`                                                   | Reverse Address Resolution Protocol(RARP) daemon.                                                                   | -                                                   |
-| `rdisc`                                                   | Network router discovery daemon.                                                                                    | -                                                   |
+| Tool                                                              | Description                                        | Resources                                           |
+| ----------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------- |
+| [`arp-scan`](https://github.com/royhills/arp-scan)                | Address Resolution Protocol (ARP) packet scanner.  | [command examples](https://tldr.ostera.io/arp-scan) |
+| `arp`                                                             | Manipulate the system ARP cache.                   | -                                                   |
+| `arping`                                                          | Send ARP REQUEST to a neighbor host.               | -                                                   |
+| `clockdiff`                                                       | Measure clock difference between hosts.            | -                                                   |
+| [`masscan`](https://github.com/robertdavidgraham/masscan)         | Internet-scale port scanner.                       | [command examples](https://tldr.ostera.io/masscan)  |
+| [`netstat`](https://man7.org/linux/man-pages/man8/netstat.8.html) | Displays network-related information.              | [command examples](https://tldr.ostera.io/netstat)  |
+| `ninfod`                                                          | Respond to IPv6 Node Information Queries.          | -                                                   |
+| [`nmap`](https://nmap.org/)                                       | Network Security Scanner.                          | [command examples](https://tldr.ostera.io/nmap)     |
+| `ping6`                                                           | Send IP6 ICMP ECHO_REQUEST to network hosts.       | -                                                   |
+| `ping`                                                            | Send IP4 ICMP ECHO_REQUEST to network hosts.       | -                                                   |
+| `rarpd`                                                           | Reverse Address Resolution Protocol (RARP) daemon. | -                                                   |
+| `rdisc`                                                           | Network router discovery daemon.                   | -                                                   |
 
 ## Transmission and communication
 
