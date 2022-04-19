@@ -137,25 +137,25 @@
 | [`envsubst`](https://github.com/kaniini/envsubst) | Perform variable substitutions on input.                      | [command examples](https://tldr.ostera.io/envsubst)               |
 | `find`                                            | Search for files in a directory hierarchy.                    | [command examples](https://tldr.ostera.io/find)                   |
 | [`git`](https://www.git-scm.com/)                 | Distribute d version control system.                          | [command examples](https://tldr.ostera.io/git)                    |
-| `free`                                            | Report the amount of free and used memory in the system.      |                                                                   |
-| `kill`                                            | Send a signal to a process based on PID.                      |                                                                   |
+| `free`                                            | Report the amount of free and used memory in the system.      | -                                                                 |
+| `kill`                                            | Send a signal to a process based on PID.                      | -                                                                 |
 | `locate`                                          | List files in databases that match a pattern.                 | [man page](https://man7.org/linux/man-pages/man1/locate.1.html)   |
-| `pgrep`                                           | List processes based on name or other attributes.             |                                                                   |
-| `pkill`                                           | Send a signal to a process based on name or other attributes. |                                                                   |
-| `pmap`                                            | Report memory map of a process.                               |                                                                   |
-| `ps`                                              | Report information of processes.                              |                                                                   |
-| `pwdx`                                            | Report current directory of a process.                        |                                                                   |
-| `skill`                                           | Obsolete version of pgrep/pkill.                              |                                                                   |
-| `slabtop`                                         | Display kernel slab cache information in real time.           |                                                                   |
-| `snice`                                           | Renice a process.                                             |                                                                   |
-| `sysctl`                                          | Read or Write kernel parameters at run-time.                  |                                                                   |
-| `tload`                                           | Graphical representation of system load average.              |                                                                   |
-| `top`                                             | Dynamic real-time view of running processes.                  |                                                                   |
+| `pgrep`                                           | List processes based on name or other attributes.             | -                                                                 |
+| `pkill`                                           | Send a signal to a process based on name or other attributes. | -                                                                 |
+| `pmap`                                            | Report memory map of a process.                               | -                                                                 |
+| `ps`                                              | Report information of processes.                              | -                                                                 |
+| `pwdx`                                            | Report current directory of a process.                        | -                                                                 |
+| `skill`                                           | Obsolete version of pgrep/pkill.                              | -                                                                 |
+| `slabtop`                                         | Display kernel slab cache information in real time.           | -                                                                 |
+| `snice`                                           | Renice a process.                                             | -                                                                 |
+| `sysctl`                                          | Read or Write kernel parameters at run-time.                  | -                                                                 |
+| `tload`                                           | Graphical representation of system load average.              | -                                                                 |
+| `top`                                             | Dynamic real-time view of running processes.                  | -                                                                 |
 | `updatedb`                                        | Update a file name database.                                  | [man page](https://man7.org/linux/man-pages/man1/updatedb.1.html) |
-| `uptime`                                          | Display how long the system has been running.                 |                                                                   |
-| `vmstat`                                          | Report virtual memory statistics.                             |                                                                   |
-| `w`                                               | Report logged in users and what they are doing.               |                                                                   |
-| `watch`                                           | Execute a program periodically, showing output full-screen.   |                                                                   |
+| `uptime`                                          | Display how long the system has been running.                 | -                                                                 |
+| `vmstat`                                          | Report virtual memory statistics.                             | -                                                                 |
+| `w`                                               | Report logged in users and what they are doing.               | -                                                                 |
+| `watch`                                           | Execute a program periodically, showing output full-screen.   | -                                                                 |
 | `xargs`                                           | Build and execute command lines from standard input.          | [command examples](https://tldr.ostera.io/xargs)                  |
 
 ## Usage
