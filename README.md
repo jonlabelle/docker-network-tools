@@ -1,7 +1,7 @@
 # Docker Network Tools
 
 [![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
-![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools?label=docker%20pulls)
+[![docker pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools?label=docker%20pulls)](https://hub.docker.com/r/jonlabelle/network-tools)
 ![image size](https://img.shields.io/docker/image-size/jonlabelle/network-tools/latest?label=image%20size)
 
 > A Docker image with various network tools pre-installed.
@@ -195,14 +195,12 @@ Scanning 256 hosts [4 ports/host]
 
 ## Related
 
--   [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
+- [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
 
 ## License
 
 [MIT License](https://github.com/jonlabelle/docker-network-tools/blob/main/LICENSE.txt)
 
-[dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
-[docker hub]: https://hub.docker.com/r/jonlabelle/network-tools
 [github container registry]: https://github.com/users/jonlabelle/packages/container/package/network-tools
 [docker run reference]: https://docs.docker.com/engine/reference/run/
 [docker run options documentation]: https://docs.docker.com/engine/reference/commandline/run/#options
