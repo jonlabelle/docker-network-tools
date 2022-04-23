@@ -5,15 +5,15 @@ TAG := dev
 
 IMAGE_NAME = $(NAME):$(TAG)
 
-default: build
+default: help
 all: lint build run
-
-build: ## Build the dev image
-	@docker build --no-cache --tag "$(IMAGE_NAME)" .
 
 .PHONY: lint
 lint: ## Lint the Dockerfile
-	@docker run --rm -i --env "HADOLINT_IGNORE=DL3013,DL3018" hadolint/hadolint < Dockerfile
+	@docker run --rm --interactive --env "HADOLINT_IGNORE=DL3013,DL3018" hadolint/hadolint < Dockerfile
+
+build: ## Build the dev image
+	@docker build --no-cache --tag "$(IMAGE_NAME)" .
 
 .PHONY: run
 run: ## Run the container a terminal session
