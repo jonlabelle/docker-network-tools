@@ -1,5 +1,3 @@
-SHELL := /bin/sh
-
 NAME := network-tools
 TAG := dev
 
