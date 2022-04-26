@@ -178,7 +178,7 @@ See [Docker Run Options documentation] for more options.
 
 ## Examples
 
-> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub],
+> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
 > replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
 > the examples below.
 
