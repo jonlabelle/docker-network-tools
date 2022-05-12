@@ -46,7 +46,7 @@ jobs:
 
       - name: Extract metadata for images
         id: meta
-        uses: docker/metadata-action@v3.7.0
+        uses: docker/metadata-action@v4.0.1
         with:
           images: |
             ${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
