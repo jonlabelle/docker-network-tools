@@ -1,12 +1,9 @@
 name: code analysis
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   schedule:
     - cron: "11 3 * * 1" # Every Monday at 3:11 AM UTC
+  workflow_dispatch:
 
 jobs:
   analyze:
