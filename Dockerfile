@@ -41,10 +41,11 @@ RUN apk -U upgrade \
         tshark \
         wget \
         python3 \
-    && apk add --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache \
-        arp-scan \
+    && apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache \
         envsubst \
         hping3 \
+    && apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community/ --no-cache \
+        arp-scan \
     && python3 -m ensurepip \
     && pip3 install --no-cache-dir --disable-pip-version-check --upgrade pip \
     && python3 -m pip install --no-cache-dir --disable-pip-version-check requests \
