@@ -1,7 +1,6 @@
 name: ghcr prune
 
 on:
-  push:
   schedule:
     - cron: "37 7 * * MON" # Every Monday at 7:37 AM UTC
   workflow_dispatch:
