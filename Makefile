@@ -3,7 +3,10 @@ TAG := dev
 
 IMAGE_NAME = $(NAME):$(TAG)
 
+.PHONY: default
 default: help
+
+.PHONY: all
 all: lint build run
 
 .PHONY: lint
