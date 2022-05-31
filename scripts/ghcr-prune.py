@@ -23,6 +23,7 @@
 # $ python3 ghcr-prune.py --container network-tools --verbose --prune-all-untagged --dry-run
 # -------------------------------------------------------------------------------------------------------
 
+import sys
 import argparse
 import dateutil.parser
 import getpass
@@ -35,8 +36,8 @@ __version__ = "0.1"
 __copyright__ = "Copyright (C) 2021 Fiona Klute"
 __license__ = "MIT"
 
-github_api = 'https://api.github.com/user/packages/container'
-github_api_accept = 'application/vnd.github.v3+json'
+GITHUB_API = 'https://api.github.com/user/packages/container'
+GITHUB_API_ACCEPT = 'application/vnd.github.v3+json'
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='List versions of a GHCR container image you own, and optionally delete (prune) old, untagged versions.')
@@ -60,15 +61,20 @@ if __name__ == "__main__":
         raise ValueError('--prune-age and --prune-all-untagged cannot be used together')
 
     sess = requests.Session()
-    sess.headers.update({'Authorization': f'token {token}', 'Accept': github_api_accept})
+    sess.headers.update({'Authorization': f'token {token}', 'Accept': GITHUB_API_ACCEPT})
 
-    resp = sess.get(f'{github_api}/{args.container}/versions')
+    resp = sess.get(f'{GITHUB_API}/{args.container}/versions')
+    if resp.status_code != 200:
+        sys.stderr.write('GitHub API returned a non-successful status code: {0}\n'.format(resp.status_code))
+        sys.stderr.write('{0}\n'.format(resp.text))
+        sys.exit(1)
+
     versions = resp.json()
 
-    # if args.verbose:
-    #     ratelimit_reset_at = datetime.fromtimestamp(int(resp.headers["x-ratelimit-reset"]))
-    #     print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining until {ratelimit_reset_at}')
-    #     print(versions)
+    if args.verbose:
+        ratelimit_reset_at = datetime.fromtimestamp(int(resp.headers["x-ratelimit-reset"]))
+        print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining until {ratelimit_reset_at}')
+        print(versions)
 
     if args.prune_age is not None:
         del_before = datetime.now().astimezone() - timedelta(days=args.prune_age)
@@ -86,7 +92,8 @@ if __name__ == "__main__":
         created = dateutil.parser.isoparse(version['created_at'])
         metadata = version["metadata"]["container"]
 
-        # print(f'{version["id"]}\t{version["name"]}\t{created}\t{metadata["tags"]}')
+        # if args.verbose:
+        #     print(f'{version["id"]}\t{version["name"]}\t{created}\t{metadata["tags"]}')
 
         if args.prune_all_untagged:
             # Prune ALL untagged images
@@ -94,7 +101,7 @@ if __name__ == "__main__":
                 if args.dry_run:
                     print(f'Would delete untagged image: {version["id"]}')
                 else:
-                    resp = sess.delete(f'{github_api}/{args.container}/versions/{version["id"]}')
+                    resp = sess.delete(f'{GITHUB_API}/{args.container}/versions/{version["id"]}')
                     resp.raise_for_status()
                     print(f'Deleted untagged image: {version["id"]}')
                 deleted_image_count = deleted_image_count + 1
@@ -104,7 +111,7 @@ if __name__ == "__main__":
                 if args.dry_run:
                     print(f'Would delete old untagged image: {version["id"]}')
                 else:
-                    resp = sess.delete(f'{github_api}/{args.container}/versions/{version["id"]}')
+                    resp = sess.delete(f'{GITHUB_API}/{args.container}/versions/{version["id"]}')
                     resp.raise_for_status()
                     print(f'Deleted old untagged image: {version["id"]}')
                 deleted_image_count = deleted_image_count + 1
