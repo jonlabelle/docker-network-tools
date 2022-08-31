@@ -68,6 +68,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
   prune:
+    needs: publish
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request' }}
 
