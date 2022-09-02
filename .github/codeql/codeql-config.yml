@@ -1,5 +1,0 @@
-# Need to specify
-# https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#specifying-directories-to-scan
-
-paths:
-  - '.github/scripts/ghcr/prune/prune.py'
