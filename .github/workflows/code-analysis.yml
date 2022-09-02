@@ -1,5 +1,8 @@
 name: code analysis
 
+paths:
+  - '.github/**/*.py'
+
 on:
   push:
   workflow_dispatch:
