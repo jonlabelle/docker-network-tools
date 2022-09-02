@@ -1,0 +1,3 @@
+# pip install --requirement requirements.txt
+python-dateutil
+requests

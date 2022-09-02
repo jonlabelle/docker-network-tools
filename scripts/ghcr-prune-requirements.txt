@@ -1,3 +1,0 @@
-# pip install --requirement ghcr-prune-requirements.txt
-python-dateutil
-requests
