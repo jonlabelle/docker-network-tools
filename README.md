@@ -115,6 +115,7 @@
 | Tool                                                       | Description                                        | Resources                                                                        |
 | ---------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
 | `iptunnel`                                                 | Creates, deletes, and displays configured tunnels. | -                                                                                |
+| [`kcat`](https://github.com/edenhill/kcat)                 | Non-JVM Apache Kafka producer and consumer.        | [examples](https://github.com/edenhill/kcat#examples)                            |
 | [`netcat`](https://packages.debian.org/sid/netcat-openbsd) | The TCP/IP swiss army knife (OpenBSD variant).     | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netcat.md)  |
 | [`openssl`](https://www.openssl.org/)                      | Toolkit for Transport Layer Security (TLS).        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/openssl.md) |
 | [`socat`](http://www.dest-unreach.org/socat/)              | Multipurpose relay for binary protocols.           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/socat.md)   |
