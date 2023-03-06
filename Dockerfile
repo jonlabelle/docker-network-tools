@@ -43,6 +43,7 @@ RUN apk -U upgrade \
         python3 \
     && apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache \
         envsubst \
+        grpcurl \
         hping3 \
     && apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community/ --no-cache \
         arp-scan \
