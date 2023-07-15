@@ -16,19 +16,25 @@ lint: ## Lints the Dockerfile
 build: ## Builds a local dev image (network-tools:dev)
 	@docker build --tag "$(IMAGE_NAME)" .
 
-buildx: ## Build for both architectures, linux/amd64 and linux/arm64
+build-arm: ## Build the linux/arm64 version
 	@docker buildx create --use
-	@docker buildx build --platform linux/amd64,linux/arm64 --tag "$(IMAGE_NAME)" .
+	@docker buildx build --platform linux/arm64 --output type=docker --tag network-tools-arm .
 
 .PHONY: run
 run: ## Runs the container a terminal session
-	@docker build --tag "$(IMAGE_NAME)" .
 	@docker run --name "$(NAME)" --rm --interactive --tty "$(IMAGE_NAME)"
 
+.PHONY: run-arm
+run-arm: ## Runs the linux/arm64 container a terminal session
+	@docker run --name "$(NAME)" --platform linux/arm64 --rm --interactive --tty network-tools-arm
+
 .PHONY: clean
-clean: ## Removes the dev and linting images
-	@docker rmi "$(IMAGE_NAME)"
-	@docker rmi hadolint/hadolint
+clean: ## Removes the built images
+	@docker rmi "$(IMAGE_NAME)"; true
+	@docker rmi network-tools-arm; true
+	@docker rmi hadolint/hadolint; true
+	@docker buildx rm --all-inactive --force; true
+	@docker buildx prune --force; true
 
 .PHONY: help
 help: ## Shows this help message
