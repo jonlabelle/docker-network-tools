@@ -16,6 +16,10 @@ lint: ## Lints the Dockerfile
 build: ## Builds a local dev image (network-tools:dev)
 	@docker build --tag "$(IMAGE_NAME)" .
 
+buildx: ## Build for both architectures, linux/amd64 and linux/arm64
+	@docker buildx create --use
+	@docker buildx build --platform linux/amd64,linux/arm64 --tag "$(IMAGE_NAME)" .
+
 .PHONY: run
 run: ## Runs the container a terminal session
 	@docker build --tag "$(IMAGE_NAME)" .
