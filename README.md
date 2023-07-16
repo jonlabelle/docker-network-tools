@@ -20,21 +20,7 @@ To run on arm64:
 docker run --rm -it --platform linux/arm64 jonlabelle/network-tools
 ```
 
-**Docker Run Options:**
-
-| Option                | Description                                       |
-| --------------------- | ------------------------------------------------- |
-| `--rm`                | Automatically remove the container when it exits. |
-| `--interactive`, `-i` | Keep STDIN open even if not attached              |
-| `--tty`, `-t`         | Allocate a pseudo-TTY                             |
-
-See [Docker Run Options documentation] for more options.
-
 ## Examples
-
-> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
-> replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
-> the examples below.
 
 Use [Nmap](https://nmap.org/) to scan for devices on a local network (10.0.10.0/24):
 
@@ -46,6 +32,10 @@ Initiating Ping Scan at 15:32
 Scanning 256 hosts [4 ports/host]
 ...
 ```
+
+> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
+> replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
+> the examples below.
 
 ## Included Tools
 
@@ -86,7 +76,7 @@ Scanning 256 hosts [4 ports/host]
 ### HTTP/Web
 
 | Tool                                                                      | Description                                             | Resources                                                                        |
-| ------------------------------------------------------------------------- | ------------------------------------------------------- | -----------------------------------------------------------------------------    |
+| ------------------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [`ab`](https://httpd.apache.org/docs/current/programs/ab.html)            | Apache HTTP server benchmarking tool.                   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ab.md)      |
 | [`curl`](https://curl.haxx.se)                                            | Tool for transferring data with URLs.                   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/curl.md)    |
 | [`grpcurl`](https://github.com/fullstorydev/grpcurl)                      | Command-line tool for interacting with gRPC servers     | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/grpcurl.md) |
@@ -213,4 +203,3 @@ Scanning 256 hosts [4 ports/host]
 
 [github container registry]: https://github.com/users/jonlabelle/packages/container/package/network-tools
 [docker run reference]: https://docs.docker.com/engine/reference/run/
-[docker run options documentation]: https://docs.docker.com/engine/reference/commandline/run/#options
