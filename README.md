@@ -20,6 +20,10 @@ To run on arm64:
 docker run --rm -it --platform linux/arm64 jonlabelle/network-tools
 ```
 
+> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
+> replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
+> the example(s) above.
+
 ## Examples
 
 Use [Nmap](https://nmap.org/) to scan for devices on a local network (10.0.10.0/24):
@@ -32,10 +36,6 @@ Initiating Ping Scan at 15:32
 Scanning 256 hosts [4 ports/host]
 ...
 ```
-
-> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
-> replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
-> the example(s) above.
 
 ## Included Tools
 
