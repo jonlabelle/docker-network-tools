@@ -35,7 +35,7 @@ Scanning 256 hosts [4 ports/host]
 
 > **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
 > replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools` in
-> the examples below.
+> the example(s) above.
 
 ## Included Tools
 
