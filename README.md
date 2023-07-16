@@ -202,4 +202,3 @@ Scanning 256 hosts [4 ports/host]
 [MIT License](https://github.com/jonlabelle/docker-network-tools/blob/main/LICENSE.txt)
 
 [github container registry]: https://github.com/users/jonlabelle/packages/container/package/network-tools
-[docker run reference]: https://docs.docker.com/engine/reference/run/
