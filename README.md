@@ -138,6 +138,7 @@ Scanning 256 hosts [4 ports/host]
 | [`netstat`](https://man7.org/linux/man-pages/man8/netstat.8.html) | Displays network-related information.              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netstat.md)  |
 | `ninfod`                                                          | Respond to IPv6 Node Information Queries.          | -                                                                                 |
 | [`nmap`](https://nmap.org/)                                       | Network Security Scanner.                          | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nmap.md)     |
+| [`nping`](https://nmap.org/nping/)                                | Network packet generation tool/ping utility.       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nping.md)    |
 | `ping6`                                                           | Send IP6 ICMP ECHO_REQUEST to network hosts.       | -                                                                                 |
 | `ping`                                                            | Send IP4 ICMP ECHO_REQUEST to network hosts.       | -                                                                                 |
 | `rarpd`                                                           | Reverse Address Resolution Protocol (RARP) daemon. | -                                                                                 |

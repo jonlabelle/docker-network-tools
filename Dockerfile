@@ -31,6 +31,7 @@ RUN apk -U upgrade \
         ngrep \
         nload \
         nmap \
+        nmap-nping \
         nmap-scripts \
         oath-toolkit-oathtool \
         openssh-client \
