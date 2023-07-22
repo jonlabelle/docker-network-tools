@@ -21,7 +21,7 @@ docker run --rm -it --platform linux/arm64 jonlabelle/network-tools
 ```
 
 > **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
-> replace `jonlabelle/network-tools` with `ghcr.io/jonlabelle/network-tools`.
+> replace **jonlabelle/network-tools** with **_ghcr.io/jonlabelle/network-tools_**.
 
 ## Examples
 
