@@ -16,7 +16,7 @@ lint: ## Lints the Dockerfile
 build: ## Builds a local dev image (network-tools:dev)
 	@docker build --tag "$(IMAGE_NAME)" .
 
-build-arm: ## Build the linux/arm64 version
+build-arm: ## Builds the linux/arm64 version
 	@docker buildx create --use
 	@docker buildx build --platform linux/arm64 --output type=docker --tag network-tools-arm .
 
