@@ -7,7 +7,8 @@ IMAGE_NAME = $(NAME):$(TAG)
 default: help
 
 .PHONY: all
-all: lint build run
+all: ## Lints the Dockerfile and runs the container a terminal session
+	lint run
 
 .PHONY: lint
 lint: ## Lints the Dockerfile
