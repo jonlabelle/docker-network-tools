@@ -22,10 +22,12 @@ build-arm: ## Builds the linux/arm64 version
 
 .PHONY: run
 run: ## Runs the container a terminal session
+	$(MAKE) build
 	@docker run --name "$(NAME)" --rm --interactive --tty "$(IMAGE_NAME)"
 
 .PHONY: run-arm
 run-arm: ## Runs the linux/arm64 container a terminal session
+	$(MAKE) build-arm
 	@docker run --name "$(NAME)" --platform linux/arm64 --rm --interactive --tty network-tools-arm
 
 .PHONY: clean
