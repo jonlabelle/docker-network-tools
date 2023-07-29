@@ -1,7 +1,10 @@
 NAME := network-tools
+ARM_NAME := network-tools-arm
+
 TAG := dev
 
 IMAGE_NAME = $(NAME):$(TAG)
+ARM_IMAGE_NAME = $(ARM_NAME):$(TAG)
 
 .PHONY: default
 default: help
@@ -17,9 +20,9 @@ lint: ## Lints the Dockerfile
 build: ## Builds a local dev image (network-tools:dev)
 	@docker build --tag "$(IMAGE_NAME)" .
 
-build-arm: ## Builds the linux/arm64 version
+build-arm: ## Builds the linux/arm64 image (network-tools-arm:dev)
 	@docker buildx create --use
-	@docker buildx build --platform linux/arm64 --output type=docker --tag network-tools-arm .
+	@docker buildx build --platform linux/arm64 --output type=docker --tag "$(ARM_IMAGE_NAME)" .
 
 .PHONY: run
 run: ## Runs the container a terminal session
@@ -29,12 +32,12 @@ run: ## Runs the container a terminal session
 .PHONY: run-arm
 run-arm: ## Runs the linux/arm64 container a terminal session
 	$(MAKE) build-arm
-	@docker run --name "$(NAME)" --platform linux/arm64 --rm --interactive --tty network-tools-arm
+	@docker run --name "$(ARM_NAME)" --platform linux/arm64 --rm --interactive --tty "$(ARM_IMAGE_NAME)"
 
 .PHONY: clean
 clean: ## Removes the built images
 	@docker rmi "$(IMAGE_NAME)"; true
-	@docker rmi network-tools-arm; true
+	@docker rmi "$(ARM_IMAGE_NAME)"; true
 	@docker rmi hadolint/hadolint; true
 	@docker buildx rm --all-inactive --force; true
 	@docker buildx prune --force; true
