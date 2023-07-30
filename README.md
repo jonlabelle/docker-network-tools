@@ -134,6 +134,7 @@ Scanning 256 hosts [4 ports/host]
 | `arp`                                                             | Manipulate the system ARP cache.                   | -                                                                                 |
 | `arping`                                                          | Send ARP REQUEST to a neighbor host.               | -                                                                                 |
 | `clockdiff`                                                       | Measure clock difference between hosts.            | -                                                                                 |
+| [`gping`](https://github.com/orf/gping)                           | Ping, but with a graph.                            | [examples](https://github.com/orf/gping#usage-saxophone)                          |
 | [`masscan`](https://github.com/robertdavidgraham/masscan)         | Internet-scale port scanner.                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/masscan.md)  |
 | [`netstat`](https://man7.org/linux/man-pages/man8/netstat.8.html) | Displays network-related information.              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netstat.md)  |
 | `ninfod`                                                          | Respond to IPv6 Node Information Queries.          | -                                                                                 |
