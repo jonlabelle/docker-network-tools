@@ -8,33 +8,26 @@
 
 ## Usage
 
-To use the tools in a new container from a terminal session:
+To launch a Bash session in your terminal:
 
 ```bash
 docker run --rm -it jonlabelle/network-tools
 ```
 
-To run on arm64:
+To launch a Bash session in your terminal on arm64:
 
 ```bash
 docker run --rm -it --platform linux/arm64 jonlabelle/network-tools
 ```
 
+To run a command directly and exit when finished (nmap in this case):
+
+```bash
+docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
+```
+
 > **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
 > replace **jonlabelle/network-tools** with **_ghcr.io/jonlabelle/network-tools_**.
-
-## Examples
-
-Use [Nmap](https://nmap.org/) to scan for devices on a local network (10.0.10.0/24):
-
-```console
-$ docker run --rm -it jonlabelle/network-tools
-[network-tools]$ nmap -v 10.0.10.0/24
-Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-26 15:32 UTC
-Initiating Ping Scan at 15:32
-Scanning 256 hosts [4 ports/host]
-...
-```
 
 ## Included Tools
 
