@@ -33,10 +33,11 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Bandwidth
 
-| Tool                                                | Description                                      | Resources                                                                      |
-| --------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
-| [`nload`](https://github.com/rolandriegel/nload)    | Console network traffic and bandwidth monitor.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nload.md) |
-| [`iperf`](https://sourceforge.net/projects/iperf2/) | A tool to measure IP bandwidth using UDP or TCP. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/iperf.md) |
+| Tool                                                      | Description                                      | Resources                                                                      |
+| --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| [`nload`](https://github.com/rolandriegel/nload)          | Console network traffic and bandwidth monitor.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nload.md) |
+| [`iperf`](https://sourceforge.net/projects/iperf2/)       | A tool to measure IP bandwidth using UDP or TCP. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/iperf.md) |
+| [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [examples](https://github.com/sivel/speedtest-cli#usage)                       |
 
 ### DNS
 
@@ -98,16 +99,17 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### IP and MAC address
 
-| Tool                                                 | Description                                                | Resources                                                                         |
-| ---------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `ifconfig`                                           | Configure a network interface.                             | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ifconfig.md) |
-| [`ipcalc`](https://jodies.de/ipcalc)                 | Network IP calculator.                                     | [man page](https://manned.org/ipcalc.1)                                           |
-| `ipmaddr`                                            | Adds, deletes, and displays multicast addresses.           | -                                                                                 |
-| [`macchanger`](https://github.com/alobbs/macchanger) | View and manipulate the MAC address of network interfaces. | [man page](https://manned.org/macchanger.1)                                       |
-| `nameif`                                             | Name network interfaces based on MAC addresses.            | -                                                                                 |
-| `plipconfig`                                         | Fine tune PLIP device parameters.                          | -                                                                                 |
-| `rarp`                                               | Manipulate the system RARP table.                          | -                                                                                 |
-| `slattach`                                           | Attach a network interface to a serial line.               | -                                                                                 |
+| Tool                                                   | Description                                                | Resources                                                                         |
+| ------------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `ifconfig`                                             | Configure a network interface.                             | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ifconfig.md) |
+| [`ipcalc`](https://jodies.de/ipcalc)                   | Network IP calculator.                                     | [man page](https://manned.org/ipcalc.1)                                           |
+| `ipmaddr`                                              | Adds, deletes, and displays multicast addresses.           | -                                                                                 |
+| [`macchanger`](https://github.com/alobbs/macchanger)   | View and manipulate the MAC address of network interfaces. | [man page](https://manned.org/macchanger.1)                                       |
+| `nameif`                                               | Name network interfaces based on MAC addresses.            | -                                                                                 |
+| [`nftables`](https://netfilter.org/projects/nftables/) | Netfilter tables userspace tools                           | [man page](https://www.netfilter.org/projects/nftables/manpage.html)              |
+| `plipconfig`                                           | Fine tune PLIP device parameters.                          | -                                                                                 |
+| `rarp`                                                 | Manipulate the system RARP table.                          | -                                                                                 |
+| `slattach`                                             | Attach a network interface to a serial line.               | -                                                                                 |
 
 ### Packet analysis
 

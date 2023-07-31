@@ -29,6 +29,7 @@ RUN apk -U upgrade \
         mtr \
         net-tools \
         netcat-openbsd \
+        nftables \
         ngrep \
         nload \
         nmap \
@@ -39,6 +40,7 @@ RUN apk -U upgrade \
         openssl \
         procps \
         socat \
+        speedtest-cli \
         tcpdump \
         tshark \
         wget \
