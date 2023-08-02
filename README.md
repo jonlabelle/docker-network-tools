@@ -37,7 +37,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
 | [`nload`](https://github.com/rolandriegel/nload)          | Console network traffic and bandwidth monitor.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nload.md) |
 | [`iperf`](https://sourceforge.net/projects/iperf2/)       | A tool to measure IP bandwidth using UDP or TCP. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/iperf.md) |
-| [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [examples](https://github.com/sivel/speedtest-cli#usage)                       |
+| [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [usage](https://github.com/sivel/speedtest-cli#usage)                          |
 
 ### DNS
 
@@ -129,7 +129,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | `arp`                                                             | Manipulate the system ARP cache.                   | -                                                                                 |
 | `arping`                                                          | Send ARP REQUEST to a neighbor host.               | -                                                                                 |
 | `clockdiff`                                                       | Measure clock difference between hosts.            | -                                                                                 |
-| [`gping`](https://github.com/orf/gping)                           | Ping, but with a graph.                            | [examples](https://github.com/orf/gping#usage-saxophone)                          |
+| [`gping`](https://github.com/orf/gping)                           | Ping, but with a graph.                            | [usage](https://github.com/orf/gping#usage-saxophone)                             |
 | [`masscan`](https://github.com/robertdavidgraham/masscan)         | Internet-scale port scanner.                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/masscan.md)  |
 | [`netstat`](https://man7.org/linux/man-pages/man8/netstat.8.html) | Displays network-related information.              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netstat.md)  |
 | `ninfod`                                                          | Respond to IPv6 Node Information Queries.          | -                                                                                 |
@@ -152,16 +152,17 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`ssh`](https://www.openssh.com/portable.html)             | OpenBSD's SSH client.                              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ssh.md)     |
 | `tftpd`                                                    | IPv4 Trivial File Transfer Protocol client.        | -                                                                                |
 
-### Trace
+### Tracing
 
-| Tool                                   | Description                                                        | Resources                                                                    |
-| -------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| [`mtr`](https://www.bitwizard.nl/mtr/) | Full screen ncurses traceroute tool.                               | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/mtr.md) |
-| `tracepath6`                           | Traces path to a IP6 network host discovering MTU along this path. | -                                                                            |
-| `tracepath`                            | Traces path to a IP4 network host discovering MTU along this path. | -                                                                            |
-| `traceroute6`                          | Print the route packets trace to IP6 network host.                 | -                                                                            |
+| Tool                                                    | Description                                                        | Resources                                                                             |
+| ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| [`mtr`](https://www.bitwizard.nl/mtr/)                  | Full screen ncurses traceroute tool.                               | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/mtr.md)          |
+| [`tcptraceroute`](https://github.com/mct/tcptraceroute) | Display route path using TCP probes.                               | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/linux/tcptraceroute.md) |
+| `tracepath6`                                            | Traces path to a IP6 network host discovering MTU along this path. | -                                                                                     |
+| `tracepath`                                             | Traces path to a IP4 network host discovering MTU along this path. | -                                                                                     |
+| `traceroute6`                                           | Print the route packets trace to IP6 network host.                 | -                                                                                     |
 
-### Additional tools included
+### Additional tools
 
 | Tool                                              | Description                                                   | Resources                                                                         |
 | ------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------- |

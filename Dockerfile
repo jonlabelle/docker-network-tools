@@ -42,6 +42,7 @@ RUN apk -U upgrade \
         socat \
         speedtest-cli \
         tcpdump \
+        tcptraceroute \
         tshark \
         wget \
         python3 \
