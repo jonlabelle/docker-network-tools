@@ -113,13 +113,13 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Packet analysis
 
-| Tool                                         | Description                                   | Resources                                                                                |
-| -------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| [`fping`](https://fping.org)                 | Search for network packets on an interface.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/fping.md)           |
-| [`hping3`](https://github.com/antirez/hping) | A ping-like TCP/IP packet assembler/analyzer. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/hping3.md)          |
-| [`ngrep`](https://github.com/jpr5/ngrep/)    | Search for network packets on an interface.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ngrep.md)           |
-| [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.        | [tcpdump examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/tcpdump.md) |
-| [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [tshark man page](https://www.wireshark.org/docs/man-pages/tshark.html)                  |
+| Tool                                         | Description                                   | Resources                                                                        |
+| -------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------- |
+| [`fping`](https://fping.org)                 | Search for network packets on an interface.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/fping.md)   |
+| [`hping3`](https://github.com/antirez/hping) | A ping-like TCP/IP packet assembler/analyzer. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/hping3.md)  |
+| [`ngrep`](https://github.com/jpr5/ngrep/)    | Search for network packets on an interface.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ngrep.md)   |
+| [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/tcpdump.md) |
+| [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [man page](https://www.wireshark.org/docs/man-pages/tshark.html)                 |
 
 ### Scanning and discovery
 
