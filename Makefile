@@ -11,7 +11,8 @@ default: help
 
 .PHONY: all
 all: ## Lints the Dockerfile and runs the container a terminal session
-	lint run
+	$(MAKE) lint
+	$(MAKE) run
 
 .PHONY: lint
 lint: ## Lints the Dockerfile
