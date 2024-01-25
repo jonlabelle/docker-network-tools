@@ -149,6 +149,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`openssl`](https://www.openssl.org/)                      | Toolkit for Transport Layer Security (TLS).        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/openssl.md) |
 | [`socat`](http://www.dest-unreach.org/socat/)              | Multipurpose relay for binary protocols.           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/socat.md)   |
 | [`ssh`](https://www.openssh.com/portable.html)             | OpenBSD's SSH client.                              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ssh.md)     |
+| [`telnet`](https://www.gnu.org/software/inetutils/)        | Telnet client from GNU network utilities           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/telnet.md)  |
 | `tftpd`                                                    | IPv4 Trivial File Transfer Protocol client.        | -                                                                                |
 
 ### Tracing

@@ -52,6 +52,7 @@ RUN apk -U upgrade \
         hping3 \
     && apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community/ --no-cache \
         arp-scan \
+        inetutils-telnet \
         kcat \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[network-tools]\$ "' >> /root/.bash_profile
