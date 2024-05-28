@@ -1,18 +1,36 @@
 version: 2
 
 updates:
-  - package-ecosystem: "docker"
-    directory: "/"
+  - package-ecosystem: docker
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: monthly
+    commit-message:
+      prefix: 'chore(deps): '
+    target-branch: main
+    groups:
+      docker-minor:
+        update-types:
+          - minor
+          - patch
     labels:
-      - "docker"
-      - "dependencies"
+      - docker
+      - dependencies
+      - dependabot
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: monthly
+    target-branch: main
+    commit-message:
+      prefix: 'chore(deps): '
+    groups:
+      actions-minor:
+        update-types:
+          - minor
+          - patch
     labels:
-      - "github-actions"
-      - "dependencies"
+      - github-actions
+      - dependencies
+      - dependabot
