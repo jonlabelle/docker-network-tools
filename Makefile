@@ -6,42 +6,45 @@ TAG := dev
 IMAGE_NAME = $(NAME):$(TAG)
 ARM_IMAGE_NAME = $(ARM_NAME):$(TAG)
 
+# Determine if docker, podman, or nerdctl is installed
+DOCKER := $(shell command -v docker 2> /dev/null || command -v podman 2> /dev/null || command -v nerdctl 2> /dev/null)
+
 .PHONY: default
 default: help
 
 .PHONY: all
-all: ## Lints the Dockerfile and runs the container a terminal session
+all: ## Lints the Dockerfile and runs the container in a terminal session
 	$(MAKE) lint
 	$(MAKE) run
 
 .PHONY: lint
 lint: ## Lints the Dockerfile
-	@docker run --rm --interactive --env "HADOLINT_IGNORE=DL3013,DL3018" hadolint/hadolint < Dockerfile
+	@$(DOCKER) run --rm --interactive --env "HADOLINT_IGNORE=DL3013,DL3018" docker.io/hadolint/hadolint:latest < Dockerfile
 
 build: ## Builds a local dev image (network-tools:dev)
-	@docker build --tag "$(IMAGE_NAME)" .
+	@$(DOCKER) build --tag "$(IMAGE_NAME)" .
 
 build-arm: ## Builds the linux/arm64 image (network-tools-arm:dev)
-	@docker buildx create --use
-	@docker buildx build --platform linux/arm64 --output type=docker --tag "$(ARM_IMAGE_NAME)" .
+	@$(DOCKER) buildx create --use
+	@$(DOCKER) buildx build --platform linux/arm64 --output type=docker --tag "$(ARM_IMAGE_NAME)" .
 
 .PHONY: run
-run: ## Runs the container a terminal session
+run: ## Runs the container in a terminal session
 	$(MAKE) build
-	@docker run --name "$(NAME)" --rm --interactive --tty "$(IMAGE_NAME)"
+	@$(DOCKER) run --name "$(NAME)" --rm --interactive --tty "$(IMAGE_NAME)"
 
 .PHONY: run-arm
-run-arm: ## Runs the linux/arm64 container a terminal session
+run-arm: ## Runs the linux/arm64 container in a terminal session
 	$(MAKE) build-arm
-	@docker run --name "$(ARM_NAME)" --platform linux/arm64 --rm --interactive --tty "$(ARM_IMAGE_NAME)"
+	@$(DOCKER) run --name "$(ARM_NAME)" --platform linux/arm64 --rm --interactive --tty "$(ARM_IMAGE_NAME)"
 
 .PHONY: clean
 clean: ## Removes the built images
-	@docker rmi "$(IMAGE_NAME)"; true
-	@docker rmi "$(ARM_IMAGE_NAME)"; true
-	@docker rmi hadolint/hadolint; true
-	@docker buildx rm --all-inactive --force; true
-	@docker buildx prune --force; true
+	@$(DOCKER) rmi "$(IMAGE_NAME)"; true
+	@$(DOCKER) rmi "$(ARM_IMAGE_NAME)"; true
+	@$(DOCKER) rmi hadolint/hadolint; true
+	@$(DOCKER) buildx rm --all-inactive --force; true
+	@$(DOCKER) buildx prune --force; true
 
 .PHONY: help
 help: ## Shows this help message
