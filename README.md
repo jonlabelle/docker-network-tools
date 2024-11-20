@@ -33,11 +33,12 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Bandwidth
 
-| Tool                                                      | Description                                      | Resources                                                                      |
-| --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
-| [`nload`](https://github.com/rolandriegel/nload)          | Console network traffic and bandwidth monitor.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nload.md) |
-| [`iperf`](https://sourceforge.net/projects/iperf2/)       | A tool to measure IP bandwidth using UDP or TCP. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/iperf.md) |
-| [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [usage](https://github.com/sivel/speedtest-cli#usage)                          |
+| Tool                                                      | Description                                      | Resources                                                                       |
+| --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
+| [`nethogs`](https://github.com/raboof/nethogs)            | Top-like monitor for network traffic.            | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/linux/nethogs.md) |
+| [`nload`](https://github.com/rolandriegel/nload)          | Console network traffic and bandwidth monitor.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nload.md)  |
+| [`iperf`](https://sourceforge.net/projects/iperf2/)       | A tool to measure IP bandwidth using UDP or TCP. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/iperf.md)  |
+| [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [usage](https://github.com/sivel/speedtest-cli#usage)                           |
 
 ### DNS
 
@@ -192,7 +193,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ## Related
 
-- [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
+[jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
 
 ## License
 

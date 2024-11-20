@@ -54,6 +54,7 @@ RUN apk -U upgrade \
         arp-scan \
         inetutils-telnet \
         kcat \
+        nethogs \
     && rm -rf /var/cache/apk/* \
     && echo 'export PS1="[network-tools]\$ "' >> /root/.bash_profile
 
