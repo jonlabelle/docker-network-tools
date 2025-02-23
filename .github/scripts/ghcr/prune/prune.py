@@ -39,15 +39,13 @@ __license__ = "MIT"
 GITHUB_API = 'https://api.github.com/user/packages/container'
 GITHUB_API_ACCEPT = 'application/vnd.github.v3+json'
 
-
-def main():
-    parser = argparse.ArgumentParser( description='List versions of a GHCR container image you own, and optionally delete (prune) old, untagged versions.')
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='List versions of a GHCR container image you own, and optionally delete (prune) old, untagged versions.')
     parser.add_argument('--token', '-t', action='store_true', help='ask for token input instead of using the GHCR_TOKEN environment variable')
     parser.add_argument('--container', default='hello-ghcr-meow', help='name of the container image')
     parser.add_argument('--verbose', '-v', action='store_true', help='print extra debug info')
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument('--prune-age', type=float, metavar='DAYS', default=None, help='delete untagged images older than DAYS days')
-    group.add_argument('--prune-all-untagged', action='store_true', help='delete ALL untagged images')
+    parser.add_argument('--prune-age', type=float, metavar='DAYS', default=None, help='delete untagged images older than DAYS days (cannot be used in combination with --prune-all-untagged)')
+    parser.add_argument('--prune-all-untagged', action='store_true', help='delete ALL untagged images (cannot be used in combination with --prune-age)')
     parser.add_argument('--dry-run', '-n', action='store_true', help='do not actually prune images, just list which images would be pruned')
 
     args = parser.parse_args()
@@ -57,7 +55,7 @@ def main():
     elif 'GHCR_TOKEN' in os.environ:
         token = os.environ['GHCR_TOKEN']
     else:
-        raise ValueError('Missing authentication token. Please provide a token using the --token option or set the GHCR_TOKEN environment variable.')
+        raise ValueError('missing authentication token')
 
     if args.prune_all_untagged is True and args.prune_age is not None:
         raise ValueError('--prune-age and --prune-all-untagged cannot be used together')
@@ -66,17 +64,16 @@ def main():
     sess.headers.update({'Authorization': f'token {token}', 'Accept': GITHUB_API_ACCEPT})
 
     resp = sess.get(f'{GITHUB_API}/{args.container}/versions')
-    resp.raise_for_status()
-    sys.exit(1)
+    if resp.status_code != 200:
+        sys.stderr.write('GitHub API returned a non-successful status code: {0}\n'.format(resp.status_code))
+        sys.stderr.write('{0}\n'.format(resp.text))
+        sys.exit(1)
 
     versions = resp.json()
 
     if args.verbose:
-        if "x-ratelimit-reset" in resp.headers:
-            ratelimit_reset_at = datetime.fromtimestamp(int(resp.headers["x-ratelimit-reset"]))
-            print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining until {ratelimit_reset_at}')
-        else:
-            print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining')
+        ratelimit_reset_at = datetime.fromtimestamp(int(resp.headers["x-ratelimit-reset"]))
+        print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining until {ratelimit_reset_at}')
         print(versions)
 
     if args.prune_age is not None:
@@ -107,7 +104,7 @@ def main():
                     resp = sess.delete(f'{GITHUB_API}/{args.container}/versions/{version["id"]}')
                     resp.raise_for_status()
                     print(f'Deleted untagged image: {version["id"]}')
-                deleted_image_count += 1
+                deleted_image_count = deleted_image_count + 1
         else:
             # Prune old untagged images:
             if del_before is not None and created < del_before and len(metadata['tags']) == 0:
@@ -117,16 +114,17 @@ def main():
                     resp = sess.delete(f'{GITHUB_API}/{args.container}/versions/{version["id"]}')
                     resp.raise_for_status()
                     print(f'Deleted old untagged image: {version["id"]}')
-                deleted_image_count += 1
+                deleted_image_count = deleted_image_count + 1
 
     if deleted_image_count == 0:
         print('No images qualified for deletion')
     else:
         if args.dry_run:
-            print("{0} image{1} would have been deleted".format(deleted_image_count, '' if deleted_image_count == 1 else 's'))
+            print("{0} image{1} would have been deleted"
+                  .format(deleted_image_count, '' if deleted_image_count == 1 else 's'))
         else:
-            print("{0} image{1} {2} deleted".format(deleted_image_count, '' if deleted_image_count == 1 else 's', 'was' if deleted_image_count == 1 else 'were'))
-
-
-if __name__ == "__main__":
-    main()
+            print("{0} image{1} {2} deleted".format(
+                deleted_image_count,
+                '' if deleted_image_count == 1 else 's',
+                'was' if deleted_image_count == 1 else 'were'
+            ))
