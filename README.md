@@ -29,7 +29,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 > **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
 > replace **jonlabelle/network-tools** with **_ghcr.io/jonlabelle/network-tools_**.
 
-## Included Tools
+## Included tools
 
 ### Bandwidth
 
@@ -67,7 +67,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`tsig-keygen`](https://linux.die.net/man/1/tsig-keygen)                      | DDNS key generation tool.                                 | [man page](https://linux.die.net/man/1/tsig-keygen)                               |
 | [`ypdomainname`](https://man7.org/linux/man-pages/man1/ypdomainname.1.html)   | Show or set the system's NIS/YP domain name.              | [man page](https://man7.org/linux/man-pages/man1/ypdomainname.1.html)             |
 
-### HTTP/Web
+### HTTP
 
 | Tool                                                                      | Description                                             | Resources                                                                        |
 | ------------------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -78,7 +78,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`oath-toolkit-oathtool`](https://www.nongnu.org/oath-toolkit/index.html) | Generate and validate one-time passwords.               | [man page](https://www.nongnu.org/oath-toolkit/man-oathtool.html)                |
 | [`wget`](https://www.gnu.org/software/wget/wget.html)                     | A network utility to retrieve files from the web.       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/wget.md)    |
 
-### IP Routing
+### IP routing
 
 | Tool                                                            | Description                                                    | Resources                                                        |
 | --------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -97,7 +97,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`rtpr`](https://linux.die.net/man/1/rtpr)                      | Replace backslashes with newlines.                             | [man page](https://linux.die.net/man/1/rtpr)                     |
 | [`rtstat`](https://man7.org/linux/man-pages/man8/rtstat.8.html) | Unified linux network statistics.                              | [man page](https://man7.org/linux/man-pages/man8/rtstat.8.html)  |
 
-### Interface and Address Management
+### Interface and address management
 
 | Tool                                                                    | Description                                                | Resources                                                                         |
 | ----------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -121,7 +121,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/tcpdump.md) |
 | [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [man page](https://www.wireshark.org/docs/man-pages/tshark.html)                 |
 
-### Discovery and Scanning
+### Discovery and scanning
 
 | Tool                                                                  | Description                                        | Resources                                                                         |
 | --------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
