@@ -42,30 +42,30 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### DNS
 
-| Tool                                            | Description                                               | Resources                                                                       |
-| ----------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `arpaname`                                      | Translate IP addresses to the corresponding ARPA names.   | -                                                                               |
-| `ddns-confgen`                                  | DDNS key generation tool.                                 | -                                                                               |
-| `delv`                                          | DNS lookup and validation utility.                        | -                                                                               |
-| `dig`                                           | DNS lookup utility.                                       | -                                                                               |
-| `dnsdomainname`                                 | Show the system's DNS domain name.                        | -                                                                               |
-| `dnstap-read`                                   | Print dnstap data in human-readable form.                 | -                                                                               |
-| `domainname`                                    | Show or set the system's NIS/YP domain name.              | -                                                                               |
-| [`drill`](https://nlnetlabs.nl/projects/ldns/)  | DNS(SEC) query tool ala dig.                              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/drill.md)  |
-| `host`                                          | DNS lookup utility.                                       | -                                                                               |
-| `hostname`                                      | Show or set the system's host name.                       | -                                                                               |
-| [`libidn`](https://www.gnu.org/software/libidn) | Encode/decode library for internationalized domain names. | [examples](https://www.gnu.org/software/libidn/manual/libidn.html#Invoking-idn) |
-| `mdig`                                          | DNS pipelined lookup utility.                             | -                                                                               |
-| `named-checkzone`                               | Zone file validity checking or converting tool.           | -                                                                               |
-| `named-compilezone`                             | Zone file validity checking or converting tool.           | -                                                                               |
-| `named-journalprint`                            | Print zone journal in human-readable form.                | -                                                                               |
-| `named-rrchecker`                               | Syntax checker for individual DNS resource records.       | -                                                                               |
-| `nisdomainname`                                 | Show or set system's NIS/YP domain name.                  | -                                                                               |
-| `nslookup`                                      | Query Internet name servers interactively.                | -                                                                               |
-| `nsupdate`                                      | Dynamic DNS update utility.                               | -                                                                               |
-| `rndc-confgen`                                  | RNDC key generation tool.                                 | -                                                                               |
-| `tsig-keygen`                                   | DDNS key generation tool.                                 | -                                                                               |
-| `ypdomainname`                                  | Show or set the system's NIS/YP domain name.              | -                                                                               |
+| Tool                                                                          | Description                                               | Resources                                                                         |
+| ----------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [`arpaname`](https://manpages.ubuntu.com/manpages/jammy/man1/arpaname.1.html) | Translate IP addresses to the corresponding ARPA names.   | [man page](https://manpages.ubuntu.com/manpages/jammy/man1/arpaname.1.html)       |
+| [`ddns-confgen`](https://linux.die.net/man/8/ddns-confgen)                    | DDNS key generation tool.                                 | [man page](https://linux.die.net/man/8/ddns-confgen)                              |
+| [`delv`](https://linux.die.net/man/1/delv)                                    | DNS lookup and validation utility.                        | [man page](https://linux.die.net/man/1/delv)                                      |
+| [`dig`](https://linux.die.net/man/1/dig)                                      | DNS lookup utility.                                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/dig.md)      |
+| [`dnsdomainname`](https://man7.org/linux/man-pages/man1/dnsdomainname.1.html) | Show the system's DNS domain name.                        | [man page](https://man7.org/linux/man-pages/man1/dnsdomainname.1.html)            |
+| [`dnstap-read`](https://github.com/dnstap/dnstap.read)                        | Print dnstap data in human-readable form.                 | [README](https://github.com/dnstap/dnstap.read/blob/master/README.md)             |
+| [`domainname`](https://man7.org/linux/man-pages/man1/domainname.1.html)       | Show or set the system's NIS/YP domain name.              | [man page](https://man7.org/linux/man-pages/man1/domainname.1.html)               |
+| [`drill`](https://nlnetlabs.nl/projects/ldns/)                                | DNS(SEC) query tool ala dig.                              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/drill.md)    |
+| [`host`](https://man7.org/linux/man-pages/man1/host.1.html)                   | DNS lookup utility.                                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/host.md)     |
+| [`hostname`](https://man7.org/linux/man-pages/man1/hostname.1.html)           | Show or set the system's host name.                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/hostname.md) |
+| [`libidn`](https://www.gnu.org/software/libidn)                               | Encode/decode library for internationalized domain names. | [examples](https://www.gnu.org/software/libidn/manual/libidn.html#Invoking-idn)   |
+| [`mdig`](https://linux.die.net/man/1/mdig)                                    | DNS pipelined lookup utility.                             | [man page](https://linux.die.net/man/1/mdig)                                      |
+| [`named-checkzone`](https://linux.die.net/man/8/named-checkzone)              | Zone file validity checking or converting tool.           | [man page](https://linux.die.net/man/8/named-checkzone)                           |
+| [`named-compilezone`](https://linux.die.net/man/8/named-compilezone)          | Zone file validity checking or converting tool.           | [man page](https://linux.die.net/man/8/named-compilezone)                         |
+| [`named-journalprint`](https://linux.die.net/man/8/named-journalprint)        | Print zone journal in human-readable form.                | [man page](https://linux.die.net/man/8/named-journalprint)                        |
+| [`named-rrchecker`](https://linux.die.net/man/8/named-rrchecker)              | Syntax checker for individual DNS resource records.       | [man page](https://linux.die.net/man/8/named-rrchecker)                           |
+| [`nisdomainname`](https://man7.org/linux/man-pages/man1/nisdomainname.1.html) | Show or set system's NIS/YP domain name.                  | [man page](https://man7.org/linux/man-pages/man1/nisdomainname.1.html)            |
+| [`nslookup`](https://linux.die.net/man/1/nslookup)                            | Query Internet name servers interactively.                | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nslookup.md) |
+| [`nsupdate`](https://linux.die.net/man/1/nsupdate)                            | Dynamic DNS update utility.                               | [man page](https://linux.die.net/man/1/nsupdate)                                  |
+| [`rndc-confgen`](https://linux.die.net/man/8/rndc-confgen)                    | RNDC key generation tool.                                 | [man page](https://linux.die.net/man/8/rndc-confgen)                              |
+| [`tsig-keygen`](https://linux.die.net/man/1/tsig-keygen)                      | DDNS key generation tool.                                 | [man page](https://linux.die.net/man/1/tsig-keygen)                               |
+| [`ypdomainname`](https://man7.org/linux/man-pages/man1/ypdomainname.1.html)   | Show or set the system's NIS/YP domain name.              | [man page](https://man7.org/linux/man-pages/man1/ypdomainname.1.html)             |
 
 ### HTTP/Web
 
@@ -80,36 +80,36 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### IP Routing
 
-| Tool     | Description                                                    | Resources |
-| -------- | -------------------------------------------------------------- | --------- |
-| `bridge` | Show / manipulate bridge addresses and devices.                | -         |
-| `ctstat` | Unified linux network statistics.                              | -         |
-| `genl`   | Generic netlink utility frontend.                              | -         |
-| `ifcfg`  | Simplistic script which replaces ifconfig IP management.       | -         |
-| `ifstat` | Handy utility to read network interface statistics.            | -         |
-| `lnstat` | Unified linux network statistics.                              | -         |
-| `nstat`  | Network statistics tools.                                      | -         |
-| `route`  | Show / manipulate the IP routing table.                        | -         |
-| `routef` | Flush network routes.                                          | -         |
-| `routel` | List routes with pretty output format.                         | -         |
-| `rtacct` | Monitor kernel SNMP counters and network interface statistics. | -         |
-| `rtmon`  | Listens to and monitors RTnetlink.                             | -         |
-| `rtpr`   | Replace backslashes with newlines.                             | -         |
-| `rtstat` | Unified linux network statistics.                              | -         |
+| Tool                                                            | Description                                                    | Resources                                                        |
+| --------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [`bridge`](https://man7.org/linux/man-pages/man8/bridge.8.html) | Show / manipulate bridge addresses and devices.                | [man page](https://man7.org/linux/man-pages/man8/bridge.8.html)  |
+| [`ctstat`](https://man7.org/linux/man-pages/man8/ctstat.8.html) | Unified linux network statistics.                              | [man page](https://man7.org/linux/man-pages/man8/ctstat.8.html)  |
+| [`genl`](https://man7.org/linux/man-pages/man8/genl.8.html)     | Generic netlink utility frontend.                              | [man page](https://man7.org/linux/man-pages/man8/genl.8.html)    |
+| [`ifcfg`](https://linux.die.net/man/8/ifcfg)                    | Simplistic script which replaces ifconfig IP management.       | [man page](https://linux.die.net/man/8/ifcfg)                    |
+| [`ifstat`](https://linux.die.net/man/1/ifstat)                  | Handy utility to read network interface statistics.            | [man page](https://linux.die.net/man/1/ifstat)                   |
+| [`lnstat`](https://man7.org/linux/man-pages/man8/lnstat.8.html) | Unified linux network statistics.                              | [man page](https://man7.org/linux/man-pages/man8/lnstat.8.html)  |
+| [`nstat`](https://man7.org/linux/man-pages/man8/nstat.8.html)   | Network statistics tools.                                      | [man page](https://man7.org/linux/man-pages/man8/nstat.8.html)   |
+| [`route`](https://man7.org/linux/man-pages/man8/route.8.html)   | Show / manipulate the IP routing table.                        | [man page](https://man7.org/linux/man-pages/man8/route.8.html)   |
+| [`routef`](https://linux.die.net/man/8/routef)                  | Flush network routes.                                          | [man page](https://linux.die.net/man/8/routef)                   |
+| [`routel`](https://github.com/routel/routel)                    | List routes with pretty output format.                         | [README](https://github.com/routel/routel/blob/master/README.md) |
+| [`rtacct`](https://man7.org/linux/man-pages/man8/rtacct.8.html) | Monitor kernel SNMP counters and network interface statistics. | [man page](https://man7.org/linux/man-pages/man8/rtacct.8.html)  |
+| [`rtmon`](https://man7.org/linux/man-pages/man8/rtmon.8.html)   | Listens to and monitors RTnetlink.                             | [man page](https://man7.org/linux/man-pages/man8/rtmon.8.html)   |
+| [`rtpr`](https://linux.die.net/man/1/rtpr)                      | Replace backslashes with newlines.                             | [man page](https://linux.die.net/man/1/rtpr)                     |
+| [`rtstat`](https://man7.org/linux/man-pages/man8/rtstat.8.html) | Unified linux network statistics.                              | [man page](https://man7.org/linux/man-pages/man8/rtstat.8.html)  |
 
-### IP and MAC address
+### Interface and Address Management
 
-| Tool                                                   | Description                                                | Resources                                                                         |
-| ------------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `ifconfig`                                             | Configure a network interface.                             | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ifconfig.md) |
-| [`ipcalc`](https://jodies.de/ipcalc)                   | Network IP calculator.                                     | [man page](https://manned.org/ipcalc.1)                                           |
-| `ipmaddr`                                              | Adds, deletes, and displays multicast addresses.           | -                                                                                 |
-| [`macchanger`](https://github.com/alobbs/macchanger)   | View and manipulate the MAC address of network interfaces. | [man page](https://manned.org/macchanger.1)                                       |
-| `nameif`                                               | Name network interfaces based on MAC addresses.            | -                                                                                 |
-| [`nftables`](https://netfilter.org/projects/nftables/) | Netfilter tables userspace tools                           | [man page](https://www.netfilter.org/projects/nftables/manpage.html)              |
-| `plipconfig`                                           | Fine tune PLIP device parameters.                          | -                                                                                 |
-| `rarp`                                                 | Manipulate the system RARP table.                          | -                                                                                 |
-| `slattach`                                             | Attach a network interface to a serial line.               | -                                                                                 |
+| Tool                                                                    | Description                                                | Resources                                                                         |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `ifconfig`                                                              | Configure a network interface.                             | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ifconfig.md) |
+| [`ipcalc`](https://jodies.de/ipcalc)                                    | Network IP calculator.                                     | [man page](https://manned.org/ipcalc.1)                                           |
+| [`ipmaddr`](https://man7.org/linux/man-pages/man8/ipmaddr.8.html)       | Adds, deletes, and displays multicast addresses.           | [man page](https://man7.org/linux/man-pages/man8/ipmaddr.8.html)                  |
+| [`macchanger`](https://github.com/alobbs/macchanger)                    | View and manipulate the MAC address of network interfaces. | [man page](https://manned.org/macchanger.1)                                       |
+| [`nameif`](https://linux.die.net/man/8/nameif)                          | Name network interfaces based on MAC addresses.            | [man page](https://linux.die.net/man/8/nameif)                                    |
+| [`nftables`](https://netfilter.org/projects/nftables/)                  | Netfilter tables userspace tools                           | [man page](https://www.netfilter.org/projects/nftables/manpage.html)              |
+| [`plipconfig`](https://man7.org/linux/man-pages/man8/plipconfig.8.html) | Fine tune PLIP device parameters.                          | [man page](https://man7.org/linux/man-pages/man8/plipconfig.8.html)               |
+| [`rarp`](https://man7.org/linux/man-pages/man8/rarp.8.html)             | Manipulate the system RARP table.                          | [man page](https://man7.org/linux/man-pages/man8/rarp.8.html)                     |
+| [`slattach`](https://man7.org/linux/man-pages/man8/slattach.8.html)     | Attach a network interface to a serial line.               | [man page](https://man7.org/linux/man-pages/man8/slattach.8.html)                 |
 
 ### Packet analysis
 
@@ -121,37 +121,38 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/tcpdump.md) |
 | [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [man page](https://www.wireshark.org/docs/man-pages/tshark.html)                 |
 
-### Scanning and discovery
+### Discovery and Scanning
 
-| Tool                                                              | Description                                        | Resources                                                                         |
-| ----------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [`arp-scan`](https://github.com/royhills/arp-scan)                | Address Resolution Protocol (ARP) packet scanner.  | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/arp.md-scan) |
-| `arp`                                                             | Manipulate the system ARP cache.                   | -                                                                                 |
-| `arping`                                                          | Send ARP REQUEST to a neighbor host.               | -                                                                                 |
-| `clockdiff`                                                       | Measure clock difference between hosts.            | -                                                                                 |
-| [`gping`](https://github.com/orf/gping)                           | Ping, but with a graph.                            | [usage](https://github.com/orf/gping#usage-saxophone)                             |
-| [`masscan`](https://github.com/robertdavidgraham/masscan)         | Internet-scale port scanner.                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/masscan.md)  |
-| [`netstat`](https://man7.org/linux/man-pages/man8/netstat.8.html) | Displays network-related information.              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netstat.md)  |
-| `ninfod`                                                          | Respond to IPv6 Node Information Queries.          | -                                                                                 |
-| [`nmap`](https://nmap.org/)                                       | Network Security Scanner.                          | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nmap.md)     |
-| [`nping`](https://nmap.org/nping/)                                | Network packet generation tool/ping utility.       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nping.md)    |
-| `ping6`                                                           | Send IP6 ICMP ECHO_REQUEST to network hosts.       | -                                                                                 |
-| `ping`                                                            | Send IP4 ICMP ECHO_REQUEST to network hosts.       | -                                                                                 |
-| `rarpd`                                                           | Reverse Address Resolution Protocol (RARP) daemon. | -                                                                                 |
-| `rdisc`                                                           | Network router discovery daemon.                   | -                                                                                 |
+| Tool                                                                  | Description                                        | Resources                                                                         |
+| --------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [`arp-scan`](https://github.com/royhills/arp-scan)                    | Address Resolution Protocol (ARP) packet scanner.  | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/arp.md-scan) |
+| [`arp`](https://man7.org/linux/man-pages/man8/arp.8.html)             | Manipulate the system ARP cache.                   | [man page](https://man7.org/linux/man-pages/man8/arp.8.html)                      |
+| [`arping`](https://linux.die.net/man/8/arping)                        | Send ARP REQUEST to a neighbor host.               | [man page](https://linux.die.net/man/8/arping)                                    |
+| `clockdiff`                                                           | Measure clock difference between hosts.            | -                                                                                 |
+| [`clockdiff`](https://man7.org/linux/man-pages/man8/clockdiff.8.html) | Measure clock difference between hosts.            | [man page](https://man7.org/linux/man-pages/man8/clockdiff.8.html)                |
+| [`gping`](https://github.com/orf/gping)                               | Ping, but with a graph.                            | [usage](https://github.com/orf/gping#usage-saxophone)                             |
+| [`masscan`](https://github.com/robertdavidgraham/masscan)             | Internet-scale port scanner.                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/masscan.md)  |
+| [`netstat`](https://man7.org/linux/man-pages/man8/netstat.8.html)     | Displays network-related information.              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netstat.md)  |
+| [`ninfod`](https://www.systutorials.com/docs/linux/man/8-ninfod/)     | Respond to IPv6 Node Information Queries.          | [man page](https://www.systutorials.com/docs/linux/man/8-ninfod/)                 |
+| [`nmap`](https://nmap.org/)                                           | Network Security Scanner.                          | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nmap.md)     |
+| [`nping`](https://nmap.org/nping/)                                    | Network packet generation tool/ping utility.       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/nping.md)    |
+| `ping6`                                                               | Send IP6 ICMP ECHO_REQUEST to network hosts.       | -                                                                                 |
+| `ping`                                                                | Send IP4 ICMP ECHO_REQUEST to network hosts.       | -                                                                                 |
+| [`rarpd`](https://man7.org/linux/man-pages/man8/rarpd.8.html)         | Reverse Address Resolution Protocol (RARP) daemon. | [man page](https://man7.org/linux/man-pages/man8/rarpd.8.html)                    |
+| [`rdisc`](https://man7.org/linux/man-pages/man8/rdisc.8.html)         | Network router discovery daemon.                   | [man page](https://man7.org/linux/man-pages/man8/rdisc.8.html)                    |
 
 ### Transmission and communication
 
-| Tool                                                       | Description                                        | Resources                                                                        |
-| ---------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `iptunnel`                                                 | Creates, deletes, and displays configured tunnels. | -                                                                                |
-| [`kcat`](https://github.com/edenhill/kcat)                 | Non-JVM Apache Kafka producer and consumer.        | [examples](https://github.com/edenhill/kcat#examples)                            |
-| [`netcat`](https://packages.debian.org/sid/netcat-openbsd) | The TCP/IP swiss army knife (OpenBSD variant).     | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netcat.md)  |
-| [`openssl`](https://www.openssl.org/)                      | Toolkit for Transport Layer Security (TLS).        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/openssl.md) |
-| [`socat`](http://www.dest-unreach.org/socat/)              | Multipurpose relay for binary protocols.           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/socat.md)   |
-| [`ssh`](https://www.openssh.com/portable.html)             | OpenBSD's SSH client.                              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ssh.md)     |
-| [`telnet`](https://www.gnu.org/software/inetutils/)        | Telnet client from GNU network utilities           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/telnet.md)  |
-| `tftpd`                                                    | IPv4 Trivial File Transfer Protocol client.        | -                                                                                |
+| Tool                                                                            | Description                                        | Resources                                                                          |
+| ------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [`iptunnel`](https://www.kernel.org/doc/Documentation/networking/ip-tunnel.txt) | Creates, deletes, and displays configured tunnels. | [documentation](https://www.kernel.org/doc/Documentation/networking/ip-tunnel.txt) |
+| [`kcat`](https://github.com/edenhill/kcat)                                      | Non-JVM Apache Kafka producer and consumer.        | [examples](https://github.com/edenhill/kcat#examples)                              |
+| [`netcat`](https://packages.debian.org/sid/netcat-openbsd)                      | The TCP/IP swiss army knife (OpenBSD variant).     | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/netcat.md)    |
+| [`openssl`](https://www.openssl.org/)                                           | Toolkit for Transport Layer Security (TLS).        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/openssl.md)   |
+| [`socat`](http://www.dest-unreach.org/socat/)                                   | Multipurpose relay for binary protocols.           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/socat.md)     |
+| [`ssh`](https://www.openssh.com/portable.html)                                  | OpenBSD's SSH client.                              | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ssh.md)       |
+| [`telnet`](https://www.gnu.org/software/inetutils/)                             | Telnet client from GNU network utilities           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/telnet.md)    |
+| `tftpd`                                                                         | IPv4 Trivial File Transfer Protocol client.        | -                                                                                  |
 
 ### Tracing
 
