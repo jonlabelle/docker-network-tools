@@ -33,6 +33,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Bandwidth
 
+Tools for measuring network bandwidth and traffic.
+
 | Tool                                                      | Description                                      | Resources                                                                       |
 | --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
 | [`nethogs`](https://github.com/raboof/nethogs)            | Top-like monitor for network traffic.            | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/linux/nethogs.md) |
@@ -41,6 +43,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [usage](https://github.com/sivel/speedtest-cli#usage)                           |
 
 ### DNS
+
+Tools for querying and managing DNS.
 
 | Tool                                                                          | Description                                               | Resources                                                                         |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -69,6 +73,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### HTTP
 
+Tools for interacting with HTTP servers.
+
 | Tool                                                                      | Description                                             | Resources                                                                        |
 | ------------------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [`ab`](https://httpd.apache.org/docs/current/programs/ab.html)            | Apache HTTP server benchmarking tool.                   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ab.md)      |
@@ -79,6 +85,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`wget`](https://www.gnu.org/software/wget/wget.html)                     | A network utility to retrieve files from the web.       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/wget.md)    |
 
 ### IP routing
+
+Tools for managing IP routing tables.
 
 | Tool                                                            | Description                                                    | Resources                                                        |
 | --------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -99,6 +107,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Interface and address management
 
+Tools for configuring network interfaces and addresses.
+
 | Tool                                                                    | Description                                                | Resources                                                                         |
 | ----------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | `ifconfig`                                                              | Configure a network interface.                             | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/ifconfig.md) |
@@ -113,6 +123,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Packet analysis
 
+Tools for capturing and analyzing network packets.
+
 | Tool                                         | Description                                   | Resources                                                                        |
 | -------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------- |
 | [`fping`](https://fping.org)                 | Search for network packets on an interface.   | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/fping.md)   |
@@ -122,6 +134,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [man page](https://www.wireshark.org/docs/man-pages/tshark.html)                 |
 
 ### Discovery and scanning
+
+Tools for discovering hosts and scanning ports.
 
 | Tool                                                                  | Description                                        | Resources                                                                         |
 | --------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -143,6 +157,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Transmission and communication
 
+Tools for sending and receiving data over the network.
+
 | Tool                                                                            | Description                                        | Resources                                                                          |
 | ------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | [`iptunnel`](https://www.kernel.org/doc/Documentation/networking/ip-tunnel.txt) | Creates, deletes, and displays configured tunnels. | [documentation](https://www.kernel.org/doc/Documentation/networking/ip-tunnel.txt) |
@@ -156,6 +172,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ### Tracing
 
+Tools for tracing network paths.
+
 | Tool                                                    | Description                                                        | Resources                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
 | [`mtr`](https://www.bitwizard.nl/mtr/)                  | Full screen ncurses traceroute tool.                               | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/mtr.md)          |
@@ -165,6 +183,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | `traceroute6`                                           | Print the route packets trace to IP6 network host.                 | -                                                                                     |
 
 ### Additional tools
+
+Miscellaneous tools available in the image.
 
 | Tool                                              | Description                                                   | Resources                                                                         |
 | ------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
