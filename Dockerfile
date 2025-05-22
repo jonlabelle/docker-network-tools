@@ -2,7 +2,7 @@ ARG ALPINE_TAG=latest
 FROM alpine:${ALPINE_TAG}
 
 LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
-    description="A Docker image with various network tools pre-installed."
+    org.opencontainers.image.description="A Docker image with various network tools pre-installed"
 
 RUN apk -U upgrade \
     && apk add --no-cache \
