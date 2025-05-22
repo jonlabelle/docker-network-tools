@@ -1,8 +1,11 @@
 ARG ALPINE_TAG=latest
 FROM alpine:${ALPINE_TAG}
 
-LABEL maintainer="Jon LaBelle <https://jonlabelle.com>" \
-    org.opencontainers.image.description="A Docker image with various network tools pre-installed"
+LABEL org.opencontainers.image.authors="Jon LaBelle <https://jonlabelle.com>" \
+    org.opencontainers.title="network-tools" \
+    org.opencontainers.image.description="A Docker image with various network tools pre-installed" \
+    org.opencontainers.image.source="https://github.com/jonlabelle/docker-network-tools" \
+    org.opencontainers.image.licenses="MIT"
 
 RUN apk -U upgrade \
     && apk add --no-cache \
