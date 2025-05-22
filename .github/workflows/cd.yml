@@ -102,4 +102,4 @@ jobs:
           pip install --requirement .github/scripts/ghcr/prune/requirements.txt
 
       - name: Prune old untagged images
-        run: python .github/scripts/ghcr/prune/prune.py --container ${{ env.IMAGE_NAME }} --prune-age 7 --verbose
+        run: python .github/scripts/ghcr/prune/prune.py --container ${{ env.IMAGE_NAME }} --prune-age 45 --verbose
