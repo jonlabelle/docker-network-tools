@@ -51,6 +51,7 @@ jobs:
             latest=false
           tags: |
             type=raw,value=latest
+            type=sha,format=short
           labels: |
             org.opencontainers.image.licenses=MIT
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
@@ -99,4 +100,4 @@ jobs:
           pip install --requirement .github/scripts/ghcr/prune/requirements.txt
 
       - name: Prune old untagged images
-        run: python .github/scripts/ghcr/prune/prune.py --container ${{ env.IMAGE_NAME }} --prune-all-untagged --verbose
+        run: python .github/scripts/ghcr/prune/prune.py --container ${{ env.IMAGE_NAME }} --prune-age 7 --verbose
