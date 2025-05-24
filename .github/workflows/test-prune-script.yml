@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - 'scripts/prune/**'
+      - .github/workflows/test-prune-script.yml
     branches: [main]
   pull_request:
     paths:
       - 'scripts/prune/**'
+      - .github/workflows/test-prune-script.yml
     branches: [main]
   workflow_dispatch:
 
