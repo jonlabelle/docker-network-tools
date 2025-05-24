@@ -11,45 +11,23 @@
 - Provide multiple pruning strategies including a new "keep latest N images" option
 - Better error handling and logging
 
-## Architecture
-
-### File Structure
-
-```plaintext
-scripts/prune/
-├── main.py                # Main CLI script
-├── strategies.py          # Pruning strategy implementations
-├── requirements.txt       # Python dependencies
-└── registries/
-    ├── __init__.py
-    ├── base.py            # Abstract base classes
-    ├── factory.py         # Registry factory
-    ├── ghcr.py            # GitHub Container Registry implementation
-    └── dockerhub.py       # Docker Hub implementation
-```
-
-### Registry Implementations
-
-- **GHCRRegistry**: Uses GitHub API with token authentication
-- **DockerHubRegistry**: Uses Docker Hub API with username/password authentication
-
-### Pruning Strategies
-
-1. **PruneUntaggedByAge**: Delete untagged images older than specified days
-2. **PruneAllUntagged**: Delete all untagged images
-3. **KeepLatestCount**: Keep only the latest N images (NEW)
-
 ## Usage Examples
 
 ### Environment Variables
 
-```bash
-# For GitHub Container Registry
-export GHCR_TOKEN=<your_github_token>
+To use the script, you need to set up environment variables for authentication. The script supports both Docker Hub and GitHub Container Registry.
 
-# For Docker Hub
+#### Docker Hub
+
+```bash
 export DOCKER_USERNAME=<your_docker_username>
 export DOCKER_PASSWORD=<your_docker_password_or_token>
+```
+
+#### GitHub Container Registry
+
+```bash
+export GHCR_TOKEN=<your_github_token>
 ```
 
 ### Command Examples
@@ -84,11 +62,11 @@ The script is integrated into two GitHub Actions workflows:
 
 ### Production Usage (`cd.yml`)
 
-The script runs after successful image builds to clean up old untagged images:
+The script runs after successful image builds to clean up old images:
 
 ```yaml
-- name: Prune old untagged images
-  run: python scripts/prune/main.py --container ${{ env.IMAGE_NAME }} --registry all --prune-untagged-age 7 --verbose
+- name: Prune old images
+  run: python scripts/prune/main.py --container ${{ env.IMAGE_NAME }} --registry all --keep-latest 25 --verbose
 ```
 
 ### Automated Testing (`test-prune-script.yml`)
@@ -122,7 +100,7 @@ The script includes a comprehensive test suite to ensure reliability and correct
 
 ```plaintext
 tests/
-├── README.md              # Testing documentation
+├── README.md             # Testing documentation
 ├── __init__.py           # Package initialization
 ├── test_prune.py         # Comprehensive unit tests (20 tests)
 ├── test_integration.py   # Integration tests (7 tests)
@@ -134,10 +112,10 @@ tests/
 **From the prune script root directory:**
 
 ```bash
-python test_runner.py                    # Master test runner
+python test_runner.py                   # Master test runner
 ```
 
-****From the tests directory:**
+**From the tests directory:**
 
 ```bash
 python tests/run_all_tests.py           # Run all test suites
@@ -156,12 +134,3 @@ The test suite covers:
 - ✅ Dry-run functionality
 - ✅ Multi-registry support
 - ✅ Authentication handling
-
-### Test Results
-
-All tests are currently passing:
-
-- 20/20 unit tests passed
-- 7/7 integration tests passed
-
-Run the test suite with `python test_runner.py` to generate current results.

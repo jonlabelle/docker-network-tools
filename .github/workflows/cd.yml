@@ -101,5 +101,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install --requirement scripts/prune/requirements.txt
 
-      - name: Prune old untagged images
+      - name: Prune old images
         run: python scripts/prune/main.py --container ${{ env.IMAGE_NAME }} --registry all --keep-latest 25 --verbose
