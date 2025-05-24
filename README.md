@@ -1,6 +1,7 @@
 # Docker Network Tools
 
 [![cd](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/cd.yml)
+[![Test Prune Script](https://github.com/jonlabelle/docker-network-tools/actions/workflows/test-prune-script.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/test-prune-script.yml)
 [![docker pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools?label=docker%20pulls)](https://hub.docker.com/r/jonlabelle/network-tools)
 [![image size](https://img.shields.io/docker/image-size/jonlabelle/network-tools/latest?label=image%20size)](https://hub.docker.com/r/jonlabelle/network-tools/tags)
 
@@ -26,7 +27,7 @@ To run a command directly and exit when finished (nmap in this case):
 docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 ```
 
-> **NOTE:** To pull from [GitHub Container Registry], instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
+> **NOTE:** To pull from [GitHub Container Registry](https://github.com/jonlabelle/docker-network-tools/pkgs/container/network-tools), instead of [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools),
 > replace **jonlabelle/network-tools** with **_ghcr.io/jonlabelle/network-tools_**.
 
 ## Included tools
@@ -212,6 +213,20 @@ Miscellaneous tools available in the image.
 | `watch`                                           | Execute a program periodically, showing output full-screen.   | -                                                                                 |
 | `xargs`                                           | Build and execute command lines from standard input.          | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/xargs.md)    |
 
+## Automated Builds
+
+This image is automatically built and published:
+
+- **Weekly**: Every Sunday at 1:43 AM UTC to ensure the latest security updates and package versions are included. This weekly schedule ensures that even if no code changes are made, the base Alpine Linux image and all installed network tools receive the latest security patches and updates.
+- **On commits**: Whenever changes are pushed to the main branch, ensuring immediate availability of new features or fixes
+- **Manual**: Can be triggered manually via GitHub Actions workflow dispatch for emergency updates or testing
+
+Images are published to both [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools) and [GitHub Container Registry](https://github.com/jonlabelle/docker-network-tools/pkgs/container/network-tools) with multi-architecture support (linux/amd64 and linux/arm64).
+
+To keep storage manageable, old untagged images are automatically pruned after 7 days during the build process. This cleanup process runs against both registries and removes intermediate build artifacts while preserving all tagged releases.
+
+The automated image cleanup is handled by a custom Python script in `scripts/prune/` which is thoroughly tested with automated CI/CD workflows that run whenever the script is modified.
+
 ## Related
 
 [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
@@ -219,5 +234,3 @@ Miscellaneous tools available in the image.
 ## License
 
 [MIT License](https://github.com/jonlabelle/docker-network-tools/blob/main/LICENSE.txt)
-
-[github container registry]: https://github.com/users/jonlabelle/packages/container/package/network-tools

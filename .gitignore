@@ -2,3 +2,14 @@
 .idea/
 tmp/
 resources/
+
+# Ignore python cache files
+__pycache__/
+*.py[cod]
+
+# venv
+bin/
+include/
+lib/
+lib64/
+pyvenv.cfg
