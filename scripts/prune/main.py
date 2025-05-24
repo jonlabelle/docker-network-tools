@@ -117,6 +117,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
+
   # Prune untagged images older than 7 days from GHCR (dry-run)
   python3 main.py --container network-tools --registry ghcr --prune-untagged-age 7 --dry-run
 
@@ -126,28 +127,31 @@ Examples:
   # Keep only the latest 3 images in both registries
   python3 main.py --container network-tools --registry all --keep-latest 3
 
-Environment Variables:
+Environment variables:
+
   GHCR_TOKEN        - GitHub personal access token (for GHCR)
   DOCKER_USERNAME   - Docker Hub username
   DOCKER_PASSWORD   - Docker Hub password or access token
         """
     )
 
-    parser.add_argument('--container', required=True, help='name of the container image')
+    parser.add_argument('--container', required=True,
+                        help='name of the container image')
     parser.add_argument('--registry', choices=['ghcr', 'dockerhub', 'all'], default='all',
-                       help='which registry to prune (default: all)')
-    parser.add_argument('--verbose', '-v', action='store_true', help='print extra debug info')
+                        help='which registry to prune (default: all)')
+    parser.add_argument('--verbose', '-v', action='store_true',
+                        help='print extra debug info')
     parser.add_argument('--dry-run', '-n', action='store_true',
-                       help='do not actually prune images, just list which images would be pruned')
+                        help='do not actually prune images, just list which images would be pruned')
 
     # Pruning strategy options (mutually exclusive)
     strategy_group = parser.add_mutually_exclusive_group(required=True)
     strategy_group.add_argument('--prune-untagged-age', type=float, metavar='DAYS',
-                               help='delete untagged images older than DAYS days')
+                                help='delete untagged images older than DAYS days')
     strategy_group.add_argument('--prune-all-untagged', action='store_true',
-                               help='delete ALL untagged images')
+                                help='delete ALL untagged images')
     strategy_group.add_argument('--keep-latest', type=int, metavar='COUNT',
-                               help='keep only the latest COUNT images (delete all others)')
+                                help='keep only the latest COUNT images (delete all others)')
 
     args = parser.parse_args()
 
@@ -166,7 +170,8 @@ Environment Variables:
         if args.registry == 'all':
             registries = create_all_registries(args.container, args.verbose)
         else:
-            registries = [create_registry(args.registry, args.container, args.verbose)]
+            registries = [create_registry(
+                args.registry, args.container, args.verbose)]
     except ValueError as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
