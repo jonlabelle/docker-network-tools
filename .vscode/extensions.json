@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "fnando.linter",
+    "github.vscode-github-actions",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
