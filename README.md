@@ -223,9 +223,8 @@ This image is automatically built and published:
 
 Images are published to both [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools) and [GitHub Container Registry](https://github.com/jonlabelle/docker-network-tools/pkgs/container/network-tools) with multi-architecture support (linux/amd64 and linux/arm64).
 
-To keep storage manageable, old untagged images are automatically pruned after 7 days during the build process. This cleanup process runs against both registries and removes intermediate build artifacts while preserving all tagged releases.
-
-The automated image cleanup is handled by a custom Python script in `scripts/prune/` which is thoroughly tested with automated CI/CD workflows that run whenever the script is modified.
+> [!Important]
+> To keep storage manageable, only the last 25 builds are kept in the registries and why you should only use the **latest** image tag.
 
 ## Related
 

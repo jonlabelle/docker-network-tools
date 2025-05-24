@@ -102,4 +102,4 @@ jobs:
           pip install --requirement scripts/prune/requirements.txt
 
       - name: Prune old untagged images
-        run: python scripts/prune/main.py --container ${{ env.IMAGE_NAME }} --registry all --prune-untagged-age 7 --verbose
+        run: python scripts/prune/main.py --container ${{ env.IMAGE_NAME }} --registry all --keep-latest 25 --verbose
