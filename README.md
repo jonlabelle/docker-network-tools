@@ -31,9 +31,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ## Included tools
 
-### Bandwidth
-
-Tools for measuring network bandwidth and traffic.
+<details>
+<summary><strong>Bandwidth</strong> - Tools for measuring network bandwidth and traffic</summary>
 
 | Tool                                                      | Description                                      | Resources                                                                       |
 | --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
@@ -42,9 +41,10 @@ Tools for measuring network bandwidth and traffic.
 | [`iperf`](https://sourceforge.net/projects/iperf2/)       | A tool to measure IP bandwidth using UDP or TCP. | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/iperf.md)  |
 | [`speedtest-cli`](https://github.com/sivel/speedtest-cli) | CLI for testing bandwidth using speedtest.net.   | [usage](https://github.com/sivel/speedtest-cli#usage)                           |
 
-### DNS
+</details>
 
-Tools for querying and managing DNS.
+<details>
+<summary><strong>DNS</strong> - Tools for querying and managing DNS</summary>
 
 | Tool                                                                          | Description                                               | Resources                                                                         |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -71,9 +71,10 @@ Tools for querying and managing DNS.
 | [`tsig-keygen`](https://linux.die.net/man/1/tsig-keygen)                      | DDNS key generation tool.                                 | [man page](https://linux.die.net/man/1/tsig-keygen)                               |
 | [`ypdomainname`](https://man7.org/linux/man-pages/man1/ypdomainname.1.html)   | Show or set the system's NIS/YP domain name.              | [man page](https://man7.org/linux/man-pages/man1/ypdomainname.1.html)             |
 
-### HTTP
+</details>
 
-Tools for interacting with HTTP servers.
+<details>
+<summary><strong>HTTP</strong> - Tools for interacting with HTTP servers</summary>
 
 | Tool                                                                      | Description                                             | Resources                                                                        |
 | ------------------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -84,9 +85,10 @@ Tools for interacting with HTTP servers.
 | [`oath-toolkit-oathtool`](https://www.nongnu.org/oath-toolkit/index.html) | Generate and validate one-time passwords.               | [man page](https://www.nongnu.org/oath-toolkit/man-oathtool.html)                |
 | [`wget`](https://www.gnu.org/software/wget/wget.html)                     | A network utility to retrieve files from the web.       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/wget.md)    |
 
-### IP routing
+</details>
 
-Tools for managing IP routing tables.
+<details>
+<summary><strong>IP routing</strong> - Tools for managing IP routing tables</summary>
 
 | Tool                                                            | Description                                                    | Resources                                                        |
 | --------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -105,9 +107,10 @@ Tools for managing IP routing tables.
 | [`rtpr`](https://linux.die.net/man/1/rtpr)                      | Replace backslashes with newlines.                             | [man page](https://linux.die.net/man/1/rtpr)                     |
 | [`rtstat`](https://man7.org/linux/man-pages/man8/rtstat.8.html) | Unified linux network statistics.                              | [man page](https://man7.org/linux/man-pages/man8/rtstat.8.html)  |
 
-### Interface and address management
+</details>
 
-Tools for configuring network interfaces and addresses.
+<details>
+<summary><strong>Interface and address management</strong> - Tools for configuring network interfaces and addresses</summary>
 
 | Tool                                                                    | Description                                                | Resources                                                                         |
 | ----------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -121,9 +124,10 @@ Tools for configuring network interfaces and addresses.
 | [`rarp`](https://man7.org/linux/man-pages/man8/rarp.8.html)             | Manipulate the system RARP table.                          | [man page](https://man7.org/linux/man-pages/man8/rarp.8.html)                     |
 | [`slattach`](https://man7.org/linux/man-pages/man8/slattach.8.html)     | Attach a network interface to a serial line.               | [man page](https://man7.org/linux/man-pages/man8/slattach.8.html)                 |
 
-### Packet analysis
+</details>
 
-Tools for capturing and analyzing network packets.
+<details>
+<summary><strong>Packet analysis</strong> - Tools for capturing and analyzing network packets</summary>
 
 | Tool                                         | Description                                   | Resources                                                                        |
 | -------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -133,9 +137,10 @@ Tools for capturing and analyzing network packets.
 | [`tcpdump`](https://www.tcpdump.org)         | Dump and analyze traffic on a network.        | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/tcpdump.md) |
 | [`tshark`](https://www.wireshark.org/)       | Network protocol analyzer (console version).  | [man page](https://www.wireshark.org/docs/man-pages/tshark.html)                 |
 
-### Discovery and scanning
+</details>
 
-Tools for discovering hosts and scanning ports.
+<details>
+<summary><strong>Discovery and scanning</strong> - Tools for discovering hosts and scanning ports</summary>
 
 | Tool                                                                  | Description                                        | Resources                                                                         |
 | --------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -155,9 +160,10 @@ Tools for discovering hosts and scanning ports.
 | [`rarpd`](https://man7.org/linux/man-pages/man8/rarpd.8.html)         | Reverse Address Resolution Protocol (RARP) daemon. | [man page](https://man7.org/linux/man-pages/man8/rarpd.8.html)                    |
 | [`rdisc`](https://man7.org/linux/man-pages/man8/rdisc.8.html)         | Network router discovery daemon.                   | [man page](https://man7.org/linux/man-pages/man8/rdisc.8.html)                    |
 
-### Transmission and communication
+</details>
 
-Tools for sending and receiving data over the network.
+<details>
+<summary><strong>Transmission and communication</strong> - Tools for sending and receiving data over the network</summary>
 
 | Tool                                                                            | Description                                        | Resources                                                                          |
 | ------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -170,9 +176,10 @@ Tools for sending and receiving data over the network.
 | [`telnet`](https://www.gnu.org/software/inetutils/)                             | Telnet client from GNU network utilities           | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/telnet.md)    |
 | `tftpd`                                                                         | IPv4 Trivial File Transfer Protocol client.        | -                                                                                  |
 
-### Tracing
+</details>
 
-Tools for tracing network paths.
+<details>
+<summary><strong>Tracing</strong> - Tools for tracing network paths</summary>
 
 | Tool                                                    | Description                                                        | Resources                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
@@ -182,9 +189,10 @@ Tools for tracing network paths.
 | `tracepath`                                             | Traces path to a IP4 network host discovering MTU along this path. | -                                                                                     |
 | `traceroute6`                                           | Print the route packets trace to IP6 network host.                 | -                                                                                     |
 
-### Additional tools
+</details>
 
-Miscellaneous tools available in the image.
+<details>
+<summary><strong>Additional tools</strong> - Miscellaneous tools available in the image</summary>
 
 | Tool                                              | Description                                                   | Resources                                                                         |
 | ------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -212,6 +220,8 @@ Miscellaneous tools available in the image.
 | `watch`                                           | Execute a program periodically, showing output full-screen.   | -                                                                                 |
 | `xargs`                                           | Build and execute command lines from standard input.          | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/xargs.md)    |
 
+</details>
+
 ## Automated Builds
 
 This image is automatically built and published:
@@ -222,8 +232,11 @@ This image is automatically built and published:
 
 Images are published to both [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools) and [GitHub Container Registry](https://github.com/jonlabelle/docker-network-tools/pkgs/container/network-tools) with multi-architecture support (linux/amd64 and linux/arm64).
 
-> [!Important]
-> To keep storage manageable, only the last 25 builds are kept in the registries and why you should only use the **latest** image tag.
+### Why Use the `latest` Tag
+
+The `latest` tag is automatically updated with weekly security patches, bug fixes, and tool updates from the Alpine Linux base image and all network utilities. This ensures you're always running the most secure and stable version without needing to track specific releases.
+
+> [!Important] > **Always use the `latest` tag** (e.g., `jonlabelle/network-tools:latest`) rather than specific version tags. To maintain manageable storage, only the last 25 builds are retained in the registries, and older tagged versions may be removed. The `latest` tag ensures you always have access to the most secure and up-to-date version of the image.
 
 ## Related
 

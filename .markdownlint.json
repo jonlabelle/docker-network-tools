@@ -69,5 +69,12 @@
   },
   "ul-style": {
     "style": "dash"
+  },
+  "no-inline-html": {
+    "allowed_elements": [
+      "details",
+      "summary",
+      "strong"
+    ]
   }
 }
