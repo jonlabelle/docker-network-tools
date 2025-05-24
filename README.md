@@ -222,7 +222,7 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 </details>
 
-## Automated Builds
+## Automated builds
 
 This image is automatically built and published:
 
@@ -232,11 +232,10 @@ This image is automatically built and published:
 
 Images are published to both [Docker Hub](https://hub.docker.com/r/jonlabelle/network-tools) and [GitHub Container Registry](https://github.com/jonlabelle/docker-network-tools/pkgs/container/network-tools) with multi-architecture support (linux/amd64 and linux/arm64).
 
-### Why Use the `latest` Tag
+### Always use the `latest` tag
 
-The `latest` tag is automatically updated with weekly security patches, bug fixes, and tool updates from the Alpine Linux base image and all network utilities. This ensures you're always running the most secure and stable version without needing to track specific releases.
-
-> [!Important] > **Always use the `latest` tag** (e.g., `jonlabelle/network-tools:latest`) rather than specific version tags. To maintain manageable storage, only the last 25 builds are retained in the registries, and older tagged versions may be removed. The `latest` tag ensures you always have access to the most secure and up-to-date version of the image.
+> [!Important]  
+> **Always use the `latest` tag** (e.g., `jonlabelle/network-tools:latest`) rather than specific version tags. The `latest` tag is automatically updated with weekly security patches, bug fixes, and tool updates, ensuring you always have access to the most secure and up-to-date version. Additionally, to maintain manageable storage, only the last 25 builds are retained in the registries, and older tagged versions may be removed.
 
 ## Related
 
