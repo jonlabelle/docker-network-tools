@@ -17,7 +17,7 @@
 # $ export GHCR_TOKEN=<secret>
 #
 # # To delete untagged images older than 30 days (dry-run):
-# $ python3 ghcr-prune.py --container network-tools --verbose --prune-age 30 --dry-run
+# $ python3 ghcr-prune.py --container network-tools --verbose --prune-untagged-age 30 --dry-run
 #
 # # To delete ALL untagged images (dry-run):
 # $ python3 ghcr-prune.py --container network-tools --verbose --prune-all-untagged --dry-run
@@ -44,8 +44,8 @@ if __name__ == "__main__":
     parser.add_argument('--token', '-t', action='store_true', help='ask for token input instead of using the GHCR_TOKEN environment variable')
     parser.add_argument('--container', default='hello-ghcr-meow', help='name of the container image')
     parser.add_argument('--verbose', '-v', action='store_true', help='print extra debug info')
-    parser.add_argument('--prune-age', type=float, metavar='DAYS', default=None, help='delete untagged images older than DAYS days (cannot be used in combination with --prune-all-untagged)')
-    parser.add_argument('--prune-all-untagged', action='store_true', help='delete ALL untagged images (cannot be used in combination with --prune-age)')
+    parser.add_argument('--prune-untagged-age', type=float, metavar='DAYS', default=None, help='delete untagged images older than DAYS days (cannot be used in combination with --prune-all-untagged)')
+    parser.add_argument('--prune-all-untagged', action='store_true', help='delete ALL untagged images (cannot be used in combination with --prune-untagged-age)')
     parser.add_argument('--dry-run', '-n', action='store_true', help='do not actually prune images, just list which images would be pruned')
 
     args = parser.parse_args()
@@ -57,8 +57,8 @@ if __name__ == "__main__":
     else:
         raise ValueError('missing authentication token')
 
-    if args.prune_all_untagged is True and args.prune_age is not None:
-        raise ValueError('--prune-age and --prune-all-untagged cannot be used together')
+    if args.prune_all_untagged is True and args.prune_untagged_age is not None:
+        raise ValueError('--prune-untagged-age and --prune-all-untagged cannot be used together')
 
     sess = requests.Session()
     sess.headers.update({'Authorization': f'token {token}', 'Accept': GITHUB_API_ACCEPT})
@@ -76,8 +76,8 @@ if __name__ == "__main__":
         print(f'{resp.headers["x-ratelimit-remaining"]} requests remaining until {ratelimit_reset_at}')
         print(versions)
 
-    if args.prune_age is not None:
-        del_before = datetime.now().astimezone() - timedelta(days=args.prune_age)
+    if args.prune_untagged_age is not None:
+        del_before = datetime.now().astimezone() - timedelta(days=args.prune_untagged_age)
     else:
         del_before = None
 
