@@ -31,6 +31,8 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 
 ## Included tools
 
+> Click each section below to expand and view the complete list of tools.
+
 <details>
 <summary><strong>Bandwidth</strong> - Tools for measuring network bandwidth and traffic</summary>
 
