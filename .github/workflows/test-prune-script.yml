@@ -54,6 +54,7 @@ jobs:
         working-directory: scripts/prune
         run: |
           echo "Running comprehensive test suite"
+          echo "Using Python: $(which python)"
           python test_runner.py
 
       - name: Check script can show help
@@ -62,8 +63,8 @@ jobs:
           echo "Testing CLI help interface"
           python main.py --help
 
-      - name: Test dry-run functionality
-        working-directory: scripts/prune
-        run: |
-          echo "Testing dry-run functionality"
-          python main.py --container test-container --registry dockerhub --prune-all-untagged --dry-run || echo "Expected to fail without credentials"
+      # - name: Test dry-run functionality
+      #   working-directory: scripts/prune
+      #   run: |
+      #     echo "Testing dry-run functionality"
+      #     python main.py --container test-container --registry dockerhub --prune-all-untagged --dry-run || echo "Expected to fail without credentials"

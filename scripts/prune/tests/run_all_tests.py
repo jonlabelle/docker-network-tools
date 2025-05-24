@@ -41,9 +41,20 @@ def main():
     """Run all test suites."""
     print("Running comprehensive test suite for prune script...")
 
+    # Determine which Python to use
+    # Try virtual environment first, fall back to system Python
+    parent_dir = os.path.dirname(os.path.dirname(__file__))
+    venv_python = os.path.join(parent_dir, "bin", "python")
+    if os.path.exists(venv_python):
+        python_cmd = "./bin/python"
+        print(f"🐍 Using virtual environment Python")
+    else:
+        python_cmd = sys.executable
+        print(f"🐍 Using system Python: {python_cmd}")
+
     test_suites = [
-        ("./bin/python tests/test_prune.py", "Comprehensive Unit Tests"),
-        ("./bin/python tests/test_integration.py", "Integration Tests"),
+        (f"{python_cmd} tests/test_prune.py", "Comprehensive Unit Tests"),
+        (f"{python_cmd} tests/test_integration.py", "Integration Tests"),
     ]
 
     passed = 0

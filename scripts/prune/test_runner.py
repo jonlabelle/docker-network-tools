@@ -24,9 +24,21 @@ def main():
     print("=" * 60)
 
     try:
+        # Determine which Python to use
+        # Try virtual environment first, fall back to system Python
+        venv_python = os.path.join(script_dir, "bin", "python")
+        if os.path.exists(venv_python):
+            python_cmd = venv_python
+            print(f"🐍 Using virtual environment Python: {python_cmd}")
+        else:
+            python_cmd = sys.executable
+            print(f"🐍 Using system Python: {python_cmd}")
+
+        print(f"📄 Running test suite: {test_runner}")
+
         # Run the test suite
         result = subprocess.run([
-            os.path.join(script_dir, "bin", "python"),
+            python_cmd,
             test_runner
         ], cwd=script_dir)
 
