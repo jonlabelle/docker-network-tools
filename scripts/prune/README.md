@@ -1,10 +1,10 @@
 # Container Image Pruning Script
 
-This document describes the refactored container image pruning script that supports both Docker Hub and GitHub Container Registry (GHCR).
+[![test prune script](https://github.com/jonlabelle/docker-network-tools/actions/workflows/test-prune-script.yml/badge.svg)](https://github.com/jonlabelle/docker-network-tools/actions/workflows/test-prune-script.yml)
+
+> Container image pruning script that supports both Docker Hub and GitHub Container Registry (GHCR).
 
 ## Overview
-
-The pruning script has been refactored to:
 
 - Support both Docker Hub and GitHub Container Registry
 - Use a modular architecture with separate registry implementations
@@ -17,15 +17,15 @@ The pruning script has been refactored to:
 
 ```plaintext
 scripts/prune/
-├── main.py                 # Main CLI script
-├── strategies.py           # Pruning strategy implementations
-├── requirements.txt        # Python dependencies
+├── main.py                # Main CLI script
+├── strategies.py          # Pruning strategy implementations
+├── requirements.txt       # Python dependencies
 └── registries/
     ├── __init__.py
     ├── base.py            # Abstract base classes
     ├── factory.py         # Registry factory
-    ├── ghcr.py           # GitHub Container Registry implementation
-    └── dockerhub.py      # Docker Hub implementation
+    ├── ghcr.py            # GitHub Container Registry implementation
+    └── dockerhub.py       # Docker Hub implementation
 ```
 
 ### Registry Implementations
@@ -83,6 +83,7 @@ python main.py --container network-tools --registry dockerhub --prune-all-untagg
 The script is integrated into two GitHub Actions workflows:
 
 ### Production Usage (`cd.yml`)
+
 The script runs after successful image builds to clean up old untagged images:
 
 ```yaml
@@ -91,6 +92,7 @@ The script runs after successful image builds to clean up old untagged images:
 ```
 
 ### Automated Testing (`test-prune-script.yml`)
+
 The test suite runs automatically whenever files in the prune directory are modified:
 
 - ✅ Unit tests (20 comprehensive tests)
@@ -129,11 +131,15 @@ tests/
 
 ### Running Tests
 
-```bash
-# From the prune script root directory:
-python test_runner.py                    # Master test runner
+**From the prune script root directory:**
 
-# From the tests directory:
+```bash
+python test_runner.py                    # Master test runner
+```
+
+****From the tests directory:**
+
+```bash
 python tests/run_all_tests.py           # Run all test suites
 python tests/test_prune.py              # Unit tests only
 python tests/test_integration.py        # Integration tests only
