@@ -53,6 +53,9 @@ class GHCRRegistry(BaseRegistry):
             )
             versions.append(version)
 
+        if self.verbose:
+            print(f'Found {len(versions)} images in GitHub Container Registry')
+
         return versions
 
     def delete_version(self, version_id: str) -> bool:
