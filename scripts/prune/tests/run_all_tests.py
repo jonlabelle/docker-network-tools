@@ -44,9 +44,9 @@ def main():
     # Determine which Python to use
     # Try virtual environment first, fall back to system Python
     parent_dir = os.path.dirname(os.path.dirname(__file__))
-    venv_python = os.path.join(parent_dir, "bin", "python")
+    venv_python = os.path.join(parent_dir, "venv", "bin", "python")
     if os.path.exists(venv_python):
-        python_cmd = "./bin/python"
+        python_cmd = "./venv/bin/python"
         print(f"🐍 Using virtual environment Python")
     else:
         python_cmd = sys.executable
