@@ -19,15 +19,15 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
 
       - name: Set up Python 3.13
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@main
         with:
-          python-version: '3.13'
+          python-version: '3.x'
 
       - name: Cache pip dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@main
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('scripts/prune/requirements.txt') }}
