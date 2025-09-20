@@ -9,6 +9,12 @@ on:
     - cron: '43 1 * * SUN' # every Sunday at 1:43 AM UTC
   workflow_dispatch:
 
+# Set empty permissions to empty by default, and then set more granular permissions for each job
+permissions: {}
+
+concurrency:
+  group: cd-${{ github.ref }}
+
 env:
   IMAGE_NAME: network-tools
 
@@ -16,6 +22,9 @@ jobs:
   # Test building on multiple architectures
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     strategy:
       matrix:
         platform: [linux/amd64, linux/arm64]
@@ -35,8 +44,8 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}
           push: false
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=gha,scope=${{ matrix.platform }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.platform }}
 
   publish:
     needs: test
@@ -46,6 +55,8 @@ jobs:
     permissions:
       packages: write
       contents: read
+      actions: read
+      attestations: write
 
     steps:
       - name: Check out repository
