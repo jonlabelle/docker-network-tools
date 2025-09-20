@@ -73,7 +73,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          no-cache: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          provenance: true
+          sbom: true
 
   prune:
     needs: publish
@@ -97,6 +100,8 @@ jobs:
         uses: actions/setup-python@main
         with:
           python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: 'scripts/prune/requirements.txt'
 
       - name: Install dependencies
         run: |
