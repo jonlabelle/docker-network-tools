@@ -1,13 +1,25 @@
-# Tests Directory
+# Tests
 
 This directory contains comprehensive tests for the container image pruning script.
 
-## Test Files
+## Overview
+
+The test suite provides comprehensive coverage of:
+
+- ✅ All pruning strategies (age-based, all-untagged, keep-latest)
+- ✅ Multi-registry support (Docker Hub + GHCR)
+- ✅ Registry factory functionality
+- ✅ Error handling and edge cases
+- ✅ CLI argument parsing and validation
+- ✅ Dry-run functionality
+- ✅ Authentication handling
+- ✅ Modular architecture components
+
+## Test Structure
 
 ### Core Test Suites
 
 - **`test_prune.py`** - Comprehensive unit tests covering all components (20 tests)
-
   - ImageVersion class functionality
   - All pruning strategies
   - Registry factory
@@ -27,7 +39,7 @@ This directory contains comprehensive tests for the container image pruning scri
 
 ## Running Tests
 
-### From the prune script root directory:
+### From the prune script root directory
 
 ```bash
 # Run all tests using the master test runner
@@ -37,7 +49,7 @@ python test_runner.py
 python tests/run_all_tests.py
 ```
 
-### From the tests directory:
+### From the tests directory
 
 ```bash
 # Run individual test files
@@ -48,45 +60,21 @@ python test_integration.py     # Integration tests
 python run_all_tests.py
 ```
 
-## Test Coverage
-
-The test suite provides comprehensive coverage of:
-
-- ✅ All pruning strategies (age-based, all-untagged, keep-latest)
-- ✅ Multi-registry support (Docker Hub + GHCR)
-- ✅ Registry factory functionality
-- ✅ Error handling and edge cases
-- ✅ CLI argument parsing and validation
-- ✅ Dry-run functionality
-- ✅ Authentication handling
-- ✅ Modular architecture components
-
-## Test Results
-
-**Current Status:** All tests passing ✅
-
-- 20/20 unit tests passed
-- 7/7 integration tests passed
-- 5/5 core functionality tests passed
-- **Total: 32/32 tests passed**
-
 ## Adding New Tests
 
 When adding new functionality to the prune script:
 
-1. Add unit tests to `test_prune.py` for new components
-2. Add integration tests to `test_integration.py` for CLI changes
-3. Update `validate_tests.py` for core functionality changes
+1. Add unit tests to [`test_prune.py`](test_prune.py) for new components
+2. Add integration tests to [`test_integration.py`](test_integration.py) for CLI changes
+3. Run [`run_all_tests.py`](run_all_tests.py) to validate all functionality works together
 4. Run the full test suite to ensure no regressions
 
-## Test Dependencies
+## Dependencies
 
-Tests use only Python standard library modules:
+Tests use only Python standard library modules (no external dependencies):
 
 - `unittest` - Main testing framework
 - `unittest.mock` - Mocking for isolated testing
 - `subprocess` - For CLI integration tests
 - `datetime` - For time-based testing
 - `pathlib` - For file path handling
-
-No external dependencies required for testing.
