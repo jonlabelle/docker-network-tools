@@ -31,31 +31,6 @@ class DockerHubRegistry(BaseRegistry):
             return self._auth_token
 
         self._auth_token = self.password
-
-        sess = requests.Session()
-        sess.headers.update({
-            'Authorization': f'Bearer {self._auth_token}',
-            'Content-Type': 'application/json'
-        })
-
-        test_url = f'{self.DOCKER_HUB_API}/repositories/{self.username}/'
-        resp = sess.get(test_url, params={'page_size': 1})
-
-        if resp.status_code == 200:
-            return self._auth_token
-
-        auth_data = {
-            'username': self.username,
-            'password': self.password
-        }
-
-        resp = requests.post(f'{self.DOCKER_HUB_API}/users/login/', json=auth_data)
-        if resp.status_code != 200:
-            sys.stderr.write(f'Docker Hub login failed: {resp.status_code}\n')
-            sys.stderr.write(f'{resp.text}\n')
-            sys.exit(1)
-
-        self._auth_token = resp.json()['token']
         return self._auth_token
 
     def list_versions(self) -> List[ImageVersion]:
