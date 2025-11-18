@@ -30,6 +30,20 @@ class DockerHubRegistry(BaseRegistry):
         if self._auth_token:
             return self._auth_token
 
+        self._auth_token = self.password
+
+        sess = requests.Session()
+        sess.headers.update({
+            'Authorization': f'Bearer {self._auth_token}',
+            'Content-Type': 'application/json'
+        })
+
+        test_url = f'{self.DOCKER_HUB_API}/repositories/{self.username}/'
+        resp = sess.get(test_url, params={'page_size': 1})
+
+        if resp.status_code == 200:
+            return self._auth_token
+
         auth_data = {
             'username': self.username,
             'password': self.password
@@ -50,7 +64,7 @@ class DockerHubRegistry(BaseRegistry):
 
         sess = requests.Session()
         sess.headers.update({
-            'Authorization': f'JWT {token}',
+            'Authorization': f'Bearer {token}',
             'Content-Type': 'application/json'
         })
 
@@ -116,7 +130,7 @@ class DockerHubRegistry(BaseRegistry):
 
         sess = requests.Session()
         sess.headers.update({
-            'Authorization': f'JWT {token}',
+            'Authorization': f'Bearer {token}',
             'Content-Type': 'application/json'
         })
 
