@@ -239,9 +239,10 @@ Images are published to both [Docker Hub](https://hub.docker.com/r/jonlabelle/ne
 > [!Important]  
 > **Always use the `latest` tag** (e.g., `jonlabelle/network-tools:latest`) rather than specific version tags. The `latest` tag is automatically updated with weekly security patches, bug fixes, and tool updates, ensuring you always have access to the most secure and up-to-date version. Additionally, to maintain manageable storage, only the last 25 builds are retained in the registries, and older tagged versions may be removed.
 
-## Related
+## My other Docker repos
 
-[jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap). Minimal Docker image with Nmap Network Security Scanner pre-installed.
+- [jonlabelle/docker-bfg](https://github.com/jonlabelle/docker-bfg) — Docker image for BFG Repo-Cleaner, a tool for removing large files and sensitive data from Git repository history
+- [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap) — Minimal Docker image with Nmap Network Security Scanner pre-installed
 
 ## License
 
