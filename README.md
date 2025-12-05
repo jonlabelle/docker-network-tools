@@ -241,7 +241,7 @@ Images are published to both [Docker Hub](https://hub.docker.com/r/jonlabelle/ne
 
 ## My other Docker repos
 
-- [jonlabelle/docker-bfg](https://github.com/jonlabelle/docker-bfg) — Docker image for BFG Repo-Cleaner, a tool for removing large files and sensitive data from Git repository history
+- [jonlabelle/docker-bfg](https://github.com/jonlabelle/docker-bfg) — Docker image for BFG Repo-Cleaner
 - [jonlabelle/docker-nmap](https://github.com/jonlabelle/docker-nmap) — Minimal Docker image with Nmap Network Security Scanner pre-installed
 
 ## License
