@@ -146,4 +146,8 @@ jobs:
           pip install --requirement scripts/prune/requirements.txt
 
       - name: Prune old images
+        env:
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: python scripts/prune/main.py --container ${{ env.IMAGE_NAME }} --registry all --keep-latest 25 --verbose
