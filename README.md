@@ -149,7 +149,6 @@ docker run --rm -it jonlabelle/network-tools nmap -v 10.0.10.0/24
 | [`arp-scan`](https://github.com/royhills/arp-scan)                    | Address Resolution Protocol (ARP) packet scanner.  | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/arp.md-scan) |
 | [`arp`](https://man7.org/linux/man-pages/man8/arp.8.html)             | Manipulate the system ARP cache.                   | [man page](https://man7.org/linux/man-pages/man8/arp.8.html)                      |
 | [`arping`](https://linux.die.net/man/8/arping)                        | Send ARP REQUEST to a neighbor host.               | [man page](https://linux.die.net/man/8/arping)                                    |
-| `clockdiff`                                                           | Measure clock difference between hosts.            | -                                                                                 |
 | [`clockdiff`](https://man7.org/linux/man-pages/man8/clockdiff.8.html) | Measure clock difference between hosts.            | [man page](https://man7.org/linux/man-pages/man8/clockdiff.8.html)                |
 | [`gping`](https://github.com/orf/gping)                               | Ping, but with a graph.                            | [usage](https://github.com/orf/gping#usage-saxophone)                             |
 | [`masscan`](https://github.com/robertdavidgraham/masscan)             | Internet-scale port scanner.                       | [examples](https://github.com/tldr-pages/tldr/blob/main/pages/common/masscan.md)  |
