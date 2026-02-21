@@ -8,11 +8,15 @@ updates:
     commit-message:
       prefix: 'chore(deps): '
     target-branch: main
+    open-pull-requests-limit: 5
     groups:
       docker-minor:
         update-types:
           - minor
           - patch
+      docker-major:
+        update-types:
+          - major
     labels:
       - docker
       - dependencies
@@ -23,6 +27,7 @@ updates:
     schedule:
       interval: monthly
     target-branch: main
+    open-pull-requests-limit: 5
     commit-message:
       prefix: 'chore(deps): '
     groups:
@@ -30,6 +35,9 @@ updates:
         update-types:
           - minor
           - patch
+      actions-major:
+        update-types:
+          - major
     labels:
       - github-actions
       - dependencies
