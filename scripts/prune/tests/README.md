@@ -71,10 +71,29 @@ When adding new functionality to the prune script:
 
 ## Dependencies
 
-Tests use only Python standard library modules (no external dependencies):
+Tests use Python standard library modules for the testing framework:
 
 - `unittest` - Main testing framework
 - `unittest.mock` - Mocking for isolated testing
 - `subprocess` - For CLI integration tests
 - `datetime` - For time-based testing
 - `pathlib` - For file path handling
+
+The application modules under test also require the packages listed in
+[`../requirements.txt`](../requirements.txt). From the prune script root directory,
+install them with:
+
+```bash
+python -m pip install --requirement requirements.txt
+```
+
+## CI Python Setup
+
+The [test workflow](../../../.github/workflows/test-prune-script.yml) and the
+[CD workflow's prune job](../../../.github/workflows/cd.yml) use the latest stable
+Python 3 version available through `actions/setup-python@main`, with
+`python-version: '3.x'` and `check-latest: true`.
+
+Both workflows install dependencies from [`../requirements.txt`](../requirements.txt)
+using `python -m pip` and use setup-python's built-in pip cache, keyed by the Python
+version and requirements file.
